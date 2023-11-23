@@ -39,3 +39,39 @@
     border: none;
     cursor: pointer;
 }
+
+/* Seção onde estarão os serviços oferecidos */
+#home_services{
+    width: 90%;
+
+    background-color: var(--cinza);
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+}
+
+#home-services-title-container{
+    width: 90%;
+}
+
+.home-services-row{
+    width: 90%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-self: center;
+}
+
+.home-services-column{
+    width: 40%;
+}
+
+.home_services_text{
+    text-align: justify;
+}
