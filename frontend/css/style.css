@@ -1,0 +1,9 @@
+/* Configurações de fonte, margem e preenchimento da página */
+@import url("./main.css");
+
+/* Importando as cores */
+@import url("/frontend/css/color.css");
+
+/* Importando componentes */
+@import url("/frontend/css/components/navbar.css"); /* navbar */
+@import url("/frontend/css/components/button.css");
