@@ -35,6 +35,8 @@
     background-color: var(--verde);
     font-weight: bold;
     color: var(--branco);
+
+    margin-bottom: 10em;
     
     border: none;
     cursor: pointer;
@@ -43,35 +45,56 @@
 /* Seção onde estarão os serviços oferecidos */
 #home_services{
     width: 90%;
-
-    background-color: var(--cinza);
-
-    border-radius: 20px;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
 
-    margin: 0 auto;
-
+    background-color: var(--cinza);
+    border-radius: 20px;
 }
 
-#home-services-title-container{
+#home_services_maintitle{
+    font-size: 40px;
+    color: var(--marino);
+}
+
+#home_services_title_container{
     width: 90%;
+    padding: 10px;
+    margin-top: 2rem;
+
+    display: flex;
+    align-self: center;
+
+    border-bottom: 2px solid var(--marino);
 }
 
 .home-services-row{
     width: 90%;
+    margin-bottom: 2rem;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     align-self: center;
 }
 
 .home-services-column{
     width: 40%;
+    margin-top: 2rem;
 }
 
-.home_services_text{
+.home-services-title{
+    font-size: 30px;
+    color: var(--verde);
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.home-services-text{
     text-align: justify;
+    font-size: 20px;
+    line-height: 28px;
 }
