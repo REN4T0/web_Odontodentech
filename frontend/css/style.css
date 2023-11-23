@@ -6,4 +6,7 @@
 
 /* Importando componentes */
 @import url("/frontend/css/components/navbar.css"); /* navbar */
-@import url("/frontend/css/components/button.css");
+@import url("/frontend/css/components/button.css"); /* botão */
+
+/* Importando estilização das telas */
+@import url("/frontend/css/pages/home.css"); /* home */

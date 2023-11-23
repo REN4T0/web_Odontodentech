@@ -1,0 +1,41 @@
+/* Seção onde estão presentes as proimeiras informaçõs e a primeira imagem */
+#home_img{
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+#home_img_info{
+    margin-top: 15rem;
+    margin-left: 5rem;
+}
+
+#home_img_title{
+    display: flex;
+    align-items: end;
+}
+
+#home_h2{
+    font-size: 40px;
+    color: var(--branco);
+
+    margin-bottom: 0.9rem;
+    margin-right: 10px;
+}
+
+#home_h1{
+    font-size: 100px;
+    color: var(--verde);
+}
+
+#home_img_btn{
+    background-color: var(--verde);
+    font-weight: bold;
+    color: var(--branco);
+    
+    border: none;
+    cursor: pointer;
+}
