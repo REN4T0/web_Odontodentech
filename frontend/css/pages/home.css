@@ -98,3 +98,19 @@
     font-size: 20px;
     line-height: 28px;
 }
+
+/* Seção onde estarão os princípios da Dentech */
+#home_principles{
+    width: 100%;
+    margin-top: 5rem;
+
+    background: var(--gradiente2);
+}
+
+#home_principles_title{
+    font-size: 50px;
+    text-align: center;
+    color: var(--verde);
+
+    padding: 4rem;
+}
