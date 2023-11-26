@@ -1,0 +1,18 @@
+.home-card{
+    width: 25%;
+    height: 17rem;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    background-color: var(--transparente1);
+}
+
+.home-card-title{
+    font-size: 2rem;
+    color: var(--branco);
+}

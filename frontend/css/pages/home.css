@@ -114,3 +114,12 @@
 
     padding: 4rem;
 }
+
+#card_row{
+    width: 85%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
