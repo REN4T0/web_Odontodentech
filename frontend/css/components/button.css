@@ -6,6 +6,8 @@
 
     border-radius: 25px;
 
+    border: 2px solid #0396a6;
+
     font-size: 20px;
     cursor: pointer;
     transition: 0.2s;

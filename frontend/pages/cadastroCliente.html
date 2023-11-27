@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Cadastro - Dentech</title>
+</head>
+<body>
+
+    <header>
+        <nav class="cad-nav">
+
+            <a href="" class="cad-nav-link">Login</a>
+            <a href="../../index.html" class="cad-nav-link">Home</a>
+
+        </nav>
+    </header>
+
+    <main class="cad-main">
+
+        <div class="cad-box">
+
+            <h1 class="cad-user-titulo">Cadastro</h1>
+
+            <form class="cad-form">
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" class="input cad-user nome" autofocus required placeholder="Digite seu nome aqui...">
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" class="input cad-user sobrenome" required placeholder="Digite seu sobrenome aqui...">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" class="input cad-user email" required placeholder="Digite seu e-mail aqui...">
+
+                <div class="cad-box-senha">
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" class="input cad-user senha" required placeholder="Digite sua senha aqui...">
+                
+                
+                
+                    <label for="repetir-senha">Repita a senha:</label>
+                    <input type="password" name="repetir-senha" class="input cad-user repetir-senha" required placeholder="Repita sua senha...">
+                    
+                </div>
+
+                <button class="button cad-user-button" type="submit">Cadastrar</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script type="module" src="../js/services/cadastroCliente.js"></script>
+
+</body>
+</html>
