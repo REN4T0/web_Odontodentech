@@ -8,6 +8,8 @@
     /* Gradientes */
     --gradiente1: linear-gradient(90deg, var(--verde) 10.97%, var(--ciano) 69.39%);;
     --gradiente2: linear-gradient(133deg, var(--marino) 0%, var(--ciano) 100%);
+    --gradiente3: linear-gradient(133deg, var(--verde) 0%, var(--marino) 100%);
+    
 
     /* Transparentes */
     --transparente1: rgb(216, 216, 214, 60%);

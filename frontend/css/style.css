@@ -10,4 +10,5 @@
 @import url("/frontend/css/components/home-card.css"); /* card da tela home */
 
 /* Importando estilização das telas */
-@import url("/frontend/css/pages/home.css"); /* home */
+@import url("/frontend/css/styles/home.css"); /* home */
+@import url("/frontend/css/styles/sobre.css"); /* sobre */

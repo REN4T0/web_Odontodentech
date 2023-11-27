@@ -6,6 +6,7 @@
     <title>Home - Dentech</title>
     <link rel="stylesheet" href="/frontend/css/style.css">
     <script defer src="./frontend/js/navbar/index.js"></script>
+    <script src="/frontend/js/window.js" defer></script>
 </head>
 <body>
 
@@ -16,7 +17,7 @@
             <ul class="nav-list">
                 <li><a class="nav-link" href="#">Início</a></li>
                 <li><a class="nav-link" href="#">Consultas</a></li>
-                <li><a class="nav-link" href="#">Sobre</a></li>
+                <li><a class="nav-link" onclick="rotas()">Sobre</a></li>
             </ul>
 
             <div id="nav-button">
@@ -29,18 +30,17 @@
     </header>
     
     <main>
-        <section>
+        <section id="home_presentation">
             <img id="home_img" src="/frontend/images/img/home_img.png" alt="imagem de uma mulher tendo seus dentes examinados">
             <div id="home_img_info">
                 <div id="home_img_title">
                     <h2 id="home_h2">Agende sua consulta</h2>
                     <h1 id="home_h1">Agora!</h1>
                 </div>
-                <button id="home_img_btn" class="button">Clique aqui!</button>
             </div>
         </section>
 
-
+        <button id="home_img_btn" class="button">Clique aqui!</button>
 
         <section id="home_services">
             <div id="home_services_title_container">
@@ -76,6 +76,8 @@
             </div>
         </section>
 
+        <button id="home_services_btn" class="button" type="button">Agende sua consulta</button>
+
         <section id="home_principles">
             <h3 id="home_principles_title">Quais são os nossos princípios?</h3>
 
@@ -102,10 +104,9 @@
                 </div>
             </div>
 
-            
+            <button id="home_principles_button" class="button">Descubra por si mesmo</button>
         </section>
     </main>
-
 
     <footer>
         
