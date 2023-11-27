@@ -6,7 +6,7 @@
     --branco:#ffffff;
     
     /* Gradientes */
-    --gradiente1: linear-gradient(90deg, var(--verde) 10.97%, var(--ciano) 69.39%);;
+    --gradiente1: linear-gradient(90deg, var(--verde) 10.97%, var(--ciano) 69.39%);
     --gradiente2: linear-gradient(133deg, var(--marino) 0%, var(--ciano) 100%);
 
     /* Transparentes */
