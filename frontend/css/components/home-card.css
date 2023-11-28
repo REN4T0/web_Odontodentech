@@ -16,3 +16,32 @@
     font-size: 2rem;
     color: var(--branco);
 }
+
+/* Responsividade */
+@media(max-width: 1110px){
+    .home-card{
+        height: 13rem;
+    }
+
+    .home-card-title{
+        font-size: 20px;
+    }
+
+    .home-card-icon{
+        width: 5rem;
+    }
+}
+
+@media(max-width: 720px){
+    .home-card{
+        width: 50%;
+        margin-top: 2rem;
+    }
+}
+
+@media(max-width: 400px){
+    .home-card{
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
