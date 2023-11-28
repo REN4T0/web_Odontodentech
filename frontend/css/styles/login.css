@@ -1,20 +1,19 @@
-.cad-main{
+.login-main{
     width: 100vw;
     height: 100vh;
-    background: var(--gradiente1);
+    background: var(--gradiente3);
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cad-box{
-
+.login-box{
     width: 30vw;
     min-height: 520px;
     height: 55vh;
     padding: 25px;
-    background-color: rgba(255, 255, 255, 0.611);
+    background-color: rgba(255, 255, 255, 0.493);
     
     border-radius: 10px;
     
@@ -24,23 +23,25 @@
     align-items: center;
 }
 
-.cad-user-titulo{
+.login-titulo{
     color: var(--marino);
 }
 
-.cad-user-button{
+
+
+.login-user-button{
     background-color: var(--marino);
     color: var(--branco);
-    margin-top: 20px;
+    margin-top: 35px;
     width: 150px;
 }
 
-.cad-user-button:active{
+.login-user-button:active{
     background-color: var(--verde);
     color: var(--marino);
 }
 
-.cad-box-senha{
+.login-box-senha{
 
     width: 100%;
     
@@ -54,38 +55,40 @@
     
 }
 
-.cad-form {
+.login-form {
     display: flex;
     flex-direction: column;
     width: 75%;
 }
 
-.cad-form input {
+.login-form input {
     width: 100%;
+    margin-bottom: 8px;
 }
 
-.cad-form button {
-    width: 150px;
-}
-
-.div-senha-cad-user{
+.div-senha-login-user{
     position: relative;
 }
 
-.div-senha-cad-user img{
+.div-senha-login-user img{
     position: absolute;
     right: 1%;
-    top: 25%;
+    top: 15%;
     cursor: pointer;
 }
 
-label{
-    margin-top: 20px;
-    margin-left: 10px;
+#link-esqueci-senha{
+    color: var(--marino);
+    margin: 10px;
 }
 
+#link-login-cadastro-cliente{
+    color: var(--marino);
+}
+
+
 @media (max-width: 1024px) {
-    .cad-box{
+    .login-box{
         margin-top: 50px;
         height: 45vh;
         width: 80%;
