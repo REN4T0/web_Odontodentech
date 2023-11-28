@@ -8,10 +8,10 @@
 @import url("/frontend/css/components/navbar.css"); /* navbar */
 @import url("/frontend/css/components/button.css"); /* botão */
 @import url("/frontend/css/components/home-card.css"); /* card da tela home */
-@import url("/frontend/css/components/navCadastro.css"); /* Navbar cadastro cliente */
-@import url("/frontend/css/components/input.css"); /* Estilização input */
+@import url("/frontend/css/components/navCadastro.css"); /* navbar (cadastro cliente) */
+@import url("/frontend/css/components/input.css"); /* input */
 
 /* Importando estilização das telas */
 @import url("/frontend/css/styles/home.css"); /* home */
-@import url("/frontend/css/styles/cadastroCliente.css"); /* home */
+@import url("/frontend/css/styles/cadastroCliente.css"); /* cadastro cliente */
 @import url("/frontend/css/styles/sobre.css"); /* sobre */

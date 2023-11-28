@@ -6,24 +6,23 @@
     <title>Home - Dentech</title>
     <link rel="stylesheet" href="/frontend/css/style.css">
     <script defer src="./frontend/js/navbar/index.js"></script>
-    <script src="/frontend/js/window.js" defer></script>
+    <script src="/frontend/js/rotas.js" defer></script>
 </head>
 <body>
 
     <header class="header">
         <nav class="nav">
-            <a href="#"><img class="logo" src="./frontend/images/img/nav_logo.png" alt="logo da dentech"></a>
+            <img class="logo" src="/frontend/images/img/nav_logo.png" onclick="rotas('home')" alt="logo da dentech">
 
             <ul class="nav-list">
-                <li><a class="nav-link" href="#">Início</a></li>
-                <li><a class="nav-link" href="#">Consultas</a></li>
-                <li><a class="nav-link" onclick="rotas()">Sobre</a></li>
+                <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+                <li><a class="nav-link" onclick="rotas('consultas')">Consultas</a></li>
+                <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
                 <div id="nav-button">
-                    <a href="./frontend/pages/cadastroCliente.html"><button id="cad-button" class="button">Cadastre-se</button></a>
+                    <button id="cad-button" class="button">Cadastre-se</button>
                     <button id="log-button" class="button">Login</button>
                 </div>
             </ul>
-
 
             <button class="hamburguer"></button>
         </nav>
@@ -40,7 +39,7 @@
             </div>
         </section>
 
-        <button id="home_img_btn" class="button">Clique aqui!</button>
+        <button id="home_img_btn" class="button home-btn">Clique aqui!</button>
 
         <section id="home_services">
             <div id="home_services_title_container">
@@ -76,7 +75,7 @@
             </div>
         </section>
 
-        <button id="home_services_btn" class="button" type="button">Agende sua consulta</button>
+        <button id="home_services_btn" class="button home-btn" type="button">Agende sua consulta</button>
 
         <section id="home_principles">
             <h3 id="home_principles_title">Quais são os nossos princípios?</h3>
@@ -104,7 +103,7 @@
                 </div>
             </div>
 
-            <button id="home_principles_button" class="button">Descubra por si mesmo</button>
+            <button id="home_principles_button" class="button home-btn">Descubra por si mesmo</button>
         </section>
     </main>
 

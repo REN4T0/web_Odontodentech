@@ -13,9 +13,3 @@
     transition: 0.2s;
 }
 
-.button:hover{
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 25px;
-    padding-left: 25px;
-}

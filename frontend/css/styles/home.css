@@ -158,6 +158,14 @@
     background: var(--gradiente3);
 }
 
+/* Animações dos botões */
+.home-btn:hover{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
 /* Responsividade */
 @media(max-width: 1112px){
     /* Título da imagem */
