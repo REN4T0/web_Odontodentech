@@ -27,11 +27,12 @@ form.addEventListener('submit', async (evento) => {
         const resultado = await cliente.cadastrar();
 
         // Caso de erro no cadastro.
+        if (resultado === false) throw new Error("Um erro inesperado ocorreu. Tente novamente mais tarde...");
         if (resultado.status === 'error') throw new Error(resultado.msg);
 
         alert(resultado.msg);
-
-        window.location.href = '../../pages/login.html';
+ 
+        window.location.href = window.location.origin + '/frontend/pages/login.html';
 
     } catch (error) {
         console.error(error);
