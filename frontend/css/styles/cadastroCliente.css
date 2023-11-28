@@ -31,6 +31,7 @@
 .cad-user-button{
     background-color: var(--marino);
     color: var(--branco);
+    margin-top: 20px;
 }
 
 .cad-user-button:active{
@@ -43,11 +44,11 @@
     width: 100%;
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     justify-content: space-between;
     
-    /* margin-top: 20px; */
+    margin-top: 20px;
     margin-bottom: 20px;
     
 }
@@ -56,6 +57,21 @@
     display: flex;
     flex-direction: column;
     width: 75%;
+}
+
+.cad-form input {
+    width: 100%;
+}
+
+.div-senha-cad-user{
+    position: relative;
+}
+
+.div-senha-cad-user img{
+    position: absolute;
+    right: 1%;
+    top: 25%;
+    cursor: pointer;
 }
 
 label{
