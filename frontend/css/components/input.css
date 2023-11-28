@@ -1,5 +1,10 @@
 .input{
     padding: 10px;
     border-radius: 20px;
-    border: 2px solid #0396a6;
+    border: 2px solid var(--ciano);
+    outline: none;
+}
+
+.input:focus{
+    border-color: var(--marino);
 }

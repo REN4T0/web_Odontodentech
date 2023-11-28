@@ -9,7 +9,6 @@
 }
 
 .cad-box{
-
     width: 30vw;
     min-height: 520px;
     height: 55vh;
@@ -33,6 +32,7 @@
     color: var(--branco);
     margin-top: 20px;
     width: 150px;
+    border: none;
 }
 
 .cad-user-button:active{
@@ -81,7 +81,9 @@
 
 label{
     margin-top: 20px;
-    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    color: var(--marino);
 }
 
 @media (max-width: 1024px) {
