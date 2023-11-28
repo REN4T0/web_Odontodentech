@@ -13,8 +13,5 @@
 
 /* Importando estilização das telas */
 @import url("/frontend/css/styles/home.css"); /* home */
-<<<<<<< HEAD
+@import url("/frontend/css/styles/cadastroCliente.css"); /* home */
 @import url("/frontend/css/styles/sobre.css"); /* sobre */
-=======
-@import url("/frontend/css/styles/cadastroCliente.css"); /* Cadastro cliente */
->>>>>>> 6bf0bf25c5feb25e34fc6a298a7ab4c4db7cebc0
