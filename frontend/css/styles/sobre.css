@@ -2,3 +2,140 @@
     width: 100%;
     height: auto;
 }
+
+/* Seção de explicação da DENTECH */
+#sobre_explanation{
+    width: 100%;
+    margin-top: 5rem;
+    
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 50px 10px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+#sobre_explanation_title{
+    font-size: 48px;
+    font-weight: 700;
+
+    color: var(--verde);
+}
+
+#sobre_explanation_container{
+    width: 85%;
+    flex-shrink: 0;
+}
+
+#sobre_explanation_text{
+    font-size: 25px;
+    font-weight: 400;
+    
+    text-align: justify;
+    line-height: 40px;
+
+    color: var(--marino);
+}
+
+/* Seção dos propósitos */
+#sobre_purposes{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+
+    background: var(--gradiente2);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sobre_purposes_box_title{
+    width: 85%;
+    margin-top: 5rem;
+
+    border-radius: 20px;
+    background-color: var(--verde);
+}
+
+#sobre_porpuses_maintitle{
+    padding: 1rem;
+    
+    color: var(--branco);
+    
+    font-size: 50px;
+    text-align: center;
+}
+
+#sobre_purposes_container{
+    width: 85%;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sobre-purposes-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sobre-purposes-midbox{
+    height: 40%;
+    padding: 20px;
+
+    background-color: var(--verde);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sobre-purposes-title{
+    font-size: 50px;
+    font-weight: normal;
+
+    text-align: center;
+
+    color: var(--branco);
+}
+
+.sobre-purposes-column{
+    width: 48%;
+}
+
+#sobre_purposes_box{
+    padding: 20px;
+
+    background-color: var(--verde);
+    border-radius: 20px;
+}
+
+.sobre-purposes-text{
+    font-size: 25px;
+    font-weight: normal;
+
+    text-align: justify;
+    line-height: 37px;
+
+    color: var(--branco);
+}
+
+.sobre-purposes-box-text{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sobre-purposes-minitext{
+    margin-top: 5px;
+
+    font-size: 15px;
+    text-align: justify;
+
+    line-height: 22px;
+    color: var(--branco);
+}
