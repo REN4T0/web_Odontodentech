@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Dentech</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="login-nav">
+
+            <a href="../../index.html" class="cad-nav-link">&#8629; Voltar</a>
+
+            <a href="../pages/cadastroCliente.html" class="cad-nav-link">Cadastrar</a>
+
+        </nav>
+    </header>
+
+    <main class="login-main">
+
+        <div class="login-box">
+
+            <h1 class="login-titulo">Login</h1>
+
+            <form class="login-form">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" class="input login-user email" required placeholder="Digite seu e-mail aqui...">
+                    
+                <label for="senha">Senha:</label>
+
+                <div class="div-senha-login-user">
+
+                    <input type="password" name="senha" class="input login-user senha" required placeholder="Digite sua senha aqui...">
+                    
+                    <img src="../images/icons/eye-fill.svg" alt="Imagem de um olho" width="20" class="img-olho-senha-login-user" data-valor="mostrar">
+                    
+
+                    <a href="#" id="link-esqueci-senha">Esqueci minha senha</a>
+
+                </div>
+            
+              
+                <button class="button login-user-button" type="submit">Entrar</button>
+
+                <br>
+
+                <p>Não tem conta? <a href="./cadastroCliente.html" id="link-login-cadastro-cliente">Cadastre-se</a></p>
+
+            </form>
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
