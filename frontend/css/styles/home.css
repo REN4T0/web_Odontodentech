@@ -201,6 +201,7 @@
     #home_services{
         width: 100%;
         border-radius: 0;
+        margin-bottom: 2rem;
     }
 
     #home_services_maintitle{
@@ -224,7 +225,11 @@
     }
 
     #home_services_btn{
-        margin-left: 10%;
+        margin: 0 auto;
+        
+        display: flex;
+        align-self: center;
+        justify-self: center;
     }
 
     /* Alteração no título da seção de princípios */
@@ -235,7 +240,18 @@
 
 
 
+@media(max-width: 720px){
+    /* Alteração na linha dos cards */
+    #card_row{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
 @media(max-width: 675px){
+    /* Alteração no título da imagem */
     #home_img_title{
         flex-direction: column;
         align-items: start;
