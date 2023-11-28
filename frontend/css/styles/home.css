@@ -13,7 +13,7 @@
 }
 
 #home_img_info{
-    margin-top: 17rem;
+    margin-top: 15%;
     margin-left: 5rem;
 
     position: absolute;
@@ -40,7 +40,7 @@
 }
 
 #home_img_btn{
-    margin-top: 25rem;
+    margin-top: 25%;
     margin-left: 5rem;
     
     font-weight: bold;
@@ -48,7 +48,7 @@
     
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 0;
     
     border: none;
     background-color: var(--verde);
@@ -130,6 +130,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
     background: var(--gradiente2);
 }
 
@@ -155,4 +156,98 @@
     
     border: none;
     background: var(--gradiente3);
+}
+
+/* Responsividade */
+@media(max-width: 1112px){
+    /* Título da imagem */
+    #home_h2{
+        font-size: 30px;
+    }
+
+    #home_h1{
+        font-size: 80px;
+    }
+}
+
+
+
+
+@media(max-width: 850px){
+    /* Alteração da seção da imagem */
+    #home_img{
+        display: none;
+    }
+
+    #home_img_info{
+        position: static;
+        margin-top: 8rem;
+
+        margin-left: 10%;
+    }
+
+    #home_img_btn{
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 2rem;
+        margin-left: 10%;
+    }
+
+    #home_h2{
+        color: var(--marino);
+    }
+
+    /* Alteração na seção de serviços */
+    #home_services{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #home_services_maintitle{
+        font-size: 25px;
+    }
+
+    .home-services-row{
+        flex-direction: column !important;
+        margin-bottom: 0;
+    }
+
+    .home-services-column{
+        width: 90%;
+        align-self: center;
+
+        margin-bottom: 2rem;
+        padding: 1rem;
+        
+        border-radius: 20px;
+        background-color: var(--transparente2);
+    }
+
+    #home_services_btn{
+        margin-left: 10%;
+    }
+
+    /* Alteração no título da seção de princípios */
+    #home_principles_title{
+        font-size: 25px;
+    }
+}
+
+
+
+@media(max-width: 675px){
+    #home_img_title{
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 2rem;
+    }
+
+    #home_h2{
+        font-size: 20px;
+        margin: 0;
+    }
+    
+    #home_h1{
+        font-size: 50px;
+    }
 }
