@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Lista de Funcionários - Dentech</title>
+    <script type="module" src="../js/rotas.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <img class="logo" src="/frontend/images/img/nav_logo.png" onclick="rotas('home')" alt="logo da dentech">
+
+            <ul class="nav-list">
+                <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+                <li><a class="nav-link" onclick="rotas('consultas')">Consultas</a></li>
+                <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+                <li><a class="nav-link link-sair" onclick="rotas('home')">Sair</a></li>
+            </ul>
+
+            <button class="hamburguer"></button>
+        </nav>
+    </header>
+
+
+    <section class="section-funcionarios">
+
+        <div class="div-pesquisa-funcionarios">
+            
+            <h1>Funcionários</h1>
+
+            <div class="div-input-pesquisa-btn">
+
+                <input type="text" class="barra-pesquisa-func input" placeholder="Procure por um funcionário" autofocus>
+
+                <button class="button btn-pesquisar-func"><img src="../images/icons/search.svg" alt=""></button>
+
+            </div>
+
+            <div class="div-btn-cad-func">
+                <img class="btn-modal-cad-func" src="../images/icons/plus-circle-fill.svg" alt="Imagem com o sinal de adição">
+                <p>Novo funcionário</p>
+            </div>
+
+        </div>
+
+        
+
+    </section>
+
+    <section class="section-cad-func">
+
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+    <script type="module" src="../js/services/listarFuncionarios.js"></script>
+</body>
+</html>

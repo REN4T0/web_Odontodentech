@@ -80,6 +80,7 @@ form.addEventListener('submit', async evento => {
         localStorage.setItem('nome', resultado.dados.nome);
         localStorage.setItem('sobrenome', resultado.dados.sobrenome);
         localStorage.setItem('email', resultado.dados.email);
+        localStorage.setItem('cargo', resultado.dados.cargo);
         localStorage.setItem('idUsuario', resultado.dados.id);
         localStorage.setItem('token', resultado.token);
         

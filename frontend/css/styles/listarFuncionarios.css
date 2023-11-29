@@ -1,0 +1,86 @@
+.section-funcionarios{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--branco);
+
+}
+
+.div-pesquisa-funcionarios{
+
+    width: 100%;
+    height: 40vh;
+    margin-top: 120px;
+
+
+}
+
+.div-pesquisa-funcionarios h1{
+    color: var(--marino);
+    font-size: 42px;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+.div-input-pesquisa-btn{
+    margin-top: 25px;
+    margin-left: 30px;
+    position: relative;
+    width: fit-content;
+}
+
+.barra-pesquisa-func{
+    width: 45vw;
+}
+
+.btn-pesquisar-func{
+
+    width: 15%;
+
+    position: absolute;
+    right: 0.5px;
+
+    padding: 6px;
+
+    background-color: var(--marino);
+    
+
+    border-radius: 0 20px 20px 0;
+    transition: -1s;
+}
+
+.btn-pesquisar-func:active{
+    background-color: var(--verde);
+    color: var(--marino);
+}
+
+.div-btn-cad-func{
+    width: fit-content;
+    display: flex;
+    margin-top: 35px;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+.div-btn-cad-func p:hover{
+    color: var(--marino);
+    text-decoration: underline;
+}
+
+.btn-modal-cad-func{
+    margin-left: 30px;
+}
+
+
+@media (max-width: 750px) {
+    .barra-pesquisa-func{
+        width: 80vw;
+    }
+
+    .btn-pesquisar-func{
+
+        width: 20%;
+
+    }
+}
