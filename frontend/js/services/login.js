@@ -81,6 +81,7 @@ form.addEventListener('submit', async evento => {
         localStorage.setItem('sobrenome', resultado.dados.sobrenome);
         localStorage.setItem('email', resultado.dados.email);
         localStorage.setItem('idUsuario', resultado.dados.id);
+        localStorage.setItem('token', resultado.token);
         
         // Falta redirecionar para alguma página que ainda não foi feita
     }
