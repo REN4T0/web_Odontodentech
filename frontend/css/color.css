@@ -4,6 +4,7 @@
     --verde: #04bf9d;
     --cinza: #d8d9d7;
     --branco:#ffffff;
+    --vermelho:#cc0000;
     
     /* Gradientes */
     --gradiente1: linear-gradient(90deg, var(--verde) 10.97%, var(--ciano) 69.39%);
