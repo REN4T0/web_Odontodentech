@@ -117,6 +117,9 @@ formSenha.addEventListener('submit', async evento => {
 
     if(resultado.status === 'success') {
 
+        // Limpando o localStorage
+        localStorage.clear();
+
         // Trocando a visibilidade dos formulários
         form.style.display = "flex";
         formSenha.style.display = "none";
