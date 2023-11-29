@@ -18,8 +18,8 @@
                 <li><a class="nav-link" onclick="rotas('consultas')">Consultas</a></li>
                 <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
                 <div id="nav-button">
-                    <button id="cad-button" class="button">Cadastre-se</button>
-                    <button id="log-button" class="button">Login</button>
+                    <button id="cad-button" class="button" onclick="rotas('cadastro')">Cadastre-se</button>
+                    <button id="log-button" class="button" onclick="rotas('login')">Login</button>
                 </div>
             </ul>
 
@@ -92,9 +92,26 @@
                 </div>
             </div>
 
-        </section>
-    </main>
+        </main>
+        
+        <section>
+            <h2>Desenvolvedores do projeto</h2>
 
+            <div id="sobre_devs_row">
+                <div class="sobre-card">
+                    <div class="sobre-card-header">
+                        <img class="sobre-card-img" src="/frontend/images/img/nathan.png" alt="">
+                        <p class="sobre-card-text">Nathan</p>
+                    </div>
+
+                    <div class="sobre-card-footer">
+                        <img src="/frontend/images/icons/linkedin.svg" alt="">
+                        <img src="/frontend/images/icons/github (1) 1.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
 
 </body>
 </html>

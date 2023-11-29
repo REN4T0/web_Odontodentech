@@ -39,6 +39,8 @@
     color: var(--marino);
 }
 
+
+
 /* Seção dos propósitos */
 #sobre_purposes{
     margin-top: 5rem;
@@ -119,7 +121,7 @@
     font-size: 25px;
     font-weight: normal;
 
-    text-align: justify;
+    text-align: center;
     line-height: 37px;
 
     color: var(--branco);
@@ -134,7 +136,7 @@
     margin-top: 5px;
 
     font-size: 15px;
-    text-align: justify;
+    text-align: center;
 
     line-height: 22px;
     color: var(--branco);

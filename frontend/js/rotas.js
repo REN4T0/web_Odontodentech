@@ -16,6 +16,9 @@ function rotas(navegar){
         case "cadastro":
             window.location.href = `${pagesFolderRoute}cadastroCliente.html`;
             break;
+        case "login":
+            window.location.href = `${pagesFolderRoute}login.html`;
+            break;
         default:
             alert("ERRO - O redirecionamento não encontrou a página que você quer acessar. Desculpe o transtorno.")
     }
