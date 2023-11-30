@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Lista de Funcionários - Dentech</title>
     <script type="module" src="../js/rotas.js"></script>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header class="header">
-        <nav class="nav">
-            <img class="logo" src="/frontend/images/img/nav_logo.png" onclick="rotas('home')" alt="logo da dentech">
+      <nav class="nav">
+        <img
+          class="logo"
+          src="/frontend/images/img/nav_logo.png"
+          onclick="rotas('home')"
+          alt="logo da dentech"
+        />
 
-            <ul class="nav-list">
-                <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
-                <li><a class="nav-link" onclick="rotas('consultas')">Consultas</a></li>
-                <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
-                <li><a class="nav-link link-sair" onclick="rotas('home')">Sair</a></li>
-            </ul>
+        <ul class="nav-list">
+          <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+          <li>
+            <a class="nav-link" onclick="rotas('consultas')">Consultas</a>
+          </li>
+          <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+          <li>
+            <a class="nav-link link-sair" onclick="rotas('home')">Sair</a>
+          </li>
+        </ul>
 
-            <button class="hamburguer"></button>
-        </nav>
+        <button class="hamburguer"></button>
+      </nav>
     </header>
 
-
     <section class="section-funcionarios">
+      <div class="div-pesquisa-funcionarios">
+        <h1>Funcionários</h1>
 
-        <div class="div-pesquisa-funcionarios">
-            
-            <h1>Funcionários</h1>
+        <div class="div-input-pesquisa-btn">
+          <input
+            type="text"
+            class="barra-pesquisa-func input"
+            placeholder="Procure por um funcionário..."
+            autofocus
+          />
 
-            <div class="div-input-pesquisa-btn">
-
-                <input type="text" class="barra-pesquisa-func input" placeholder="Procure por um funcionário..." autofocus>
-
-                <button class="button btn-pesquisar-func"><img src="../images/icons/search.svg" alt="Ícone de lupa"></button>
-
-            </div>
-
-            <div class="div-btn-cad-func">
-                <img class="btn-modal-cad-func" src="../images/icons/plus-circle-fill.svg" alt="Imagem com o sinal de adição">
-                <p>Novo funcionário</p>
-            </div>
-
+          <button class="button btn-pesquisar-func">
+            <img src="../images/icons/search.svg" alt="Ícone de lupa" />
+          </button>
         </div>
 
-        <div class="div-filtros-func">
-            <div class="filtro-func filtro-ativo">Todos</div>
-            <div class="filtro-func">Ativos</div>
-            <div class="filtro-func">Demitidos</div>
+        <div class="div-btn-cad-func">
+          <img
+            class="btn-modal-cad-func"
+            src="../images/icons/plus-circle-fill.svg"
+            alt="Imagem com o sinal de adição"
+          />
+          <p>Novo funcionário</p>
+        </div>
+      </div>
+
+      <div class="div-filtros-func">
+        <div class="filtro-func filtro-ativo">Todos</div>
+        <div class="filtro-func">Ativos</div>
+        <div class="filtro-func">Demitidos</div>
+      </div>
+
+      <div class="div-exibir-func">
+        <div class="card-func">
+          <h1 class="titulo-card-nome-func">Nathan de Sousa Barros</h1>
+          <p class="p-email-func">nathan@dentech.com</p>
+          <p class="p-cargo-func">Adm</p>
+
+          <div class="div-card-func-btn">
+            <button class="btn-editar-func">Editar</button>
+            <button class="btn-demitir-func">Demitir</button>
+          </div>
         </div>
 
-        <div class="div-exibir-func">
-
-            <div class="card-func">
-
-                <h1 class="titulo-card-nome-func">Nathan de Sousa Barros</h1>
-                <p class="p-email-func">nathan@dentech.com</p>
-                <p class="p-cargo-func">Adm</p>
-
-                <div class="div-card-func-btn">
-                    <button class="btn-editar-func">Editar</button>
-                    <button class="btn-demitir-func">Demitir</button>
-                </div>
-
-            </div>
-
-        </div>
-
-
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+        <div class="card-func"></div>
+      </div>
     </section>
 
-    <section class="section-cad-func">
+    <section class="section-cad-func"></section>
 
-    </section>
-
-
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script type="module" src="../js/services/listarFuncionarios.js"></script>
-</body>
+  </body>
 </html>

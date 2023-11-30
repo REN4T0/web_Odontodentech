@@ -45,23 +45,24 @@
     width: 15%;
 
     position: absolute;
-    top: 0.5px;
+    top: 1.4px;
     right: 1px;
 
-    padding: 9.5px;
+    padding: 9.6px;
 
     background-color: var(--marino);
 
     border: none;
     
 
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
     transition: -1s;
 }
 
 .btn-pesquisar-func:active{
     background-color: var(--verde);
     color: var(--marino);
+    border: 2px solid var(--marino);
 }
 
 /* 
