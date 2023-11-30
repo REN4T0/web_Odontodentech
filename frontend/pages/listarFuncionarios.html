@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,7 +72,7 @@
           <p class="p-cargo-func">Adm</p>
 
           <div class="div-card-func-btn">
-            <button class="btn-editar-func">Editar</button>
+            <button class="btn-modal-editar-func">Editar</button>
             <button class="btn-demitir-func">Demitir</button>
           </div>
         </div>
@@ -87,9 +87,81 @@
         <div class="card-func"></div>
         <div class="card-func"></div>
       </div>
+
+      <div class="div-modal-cad-func">
+        <form class="modal-cad-func">
+          <h1>Novo colaborador</h1>
+
+          <label>Nome:</label>
+          <input
+            type="text"
+            class="input"
+            required
+            id="nome-func"
+            placeholder="Digite o nome aqui..."
+            autofocus
+          />
+
+          <label>Sobrenome:</label>
+          <input
+            type="text"
+            class="input"
+            id="sobrenome-func"
+            required
+            placeholder="Digite o nome aqui..."
+          />
+
+          <label>E-mail:</label>
+          <input
+            type="email"
+            class="input"
+            id="email-func"
+            required
+            placeholder="Digite o e-mail aqui..."
+          />
+
+          <label>Cargo:</label>
+          <select id="cargo-func-cad" class="input">
+            <option value="" selected disabled hidden>
+              Selecione um cargo
+            </option>
+            <option value="assistente">Assistente</option>
+            <option value="dentista">Dentista</option>
+            <option value="adm">Administrador</option>
+          </select>
+
+          <div>
+            <button type="submit" class="button btn-cadastrar-func">
+              Cadastrar
+            </button>
+            <button type="button" class="button btn-cancelar-cadastro-func">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
 
-    <section class="section-cad-func"></section>
+    <div class="div-modal-editar-func">
+      <form class="modal-editar-func">
+        <h1>Editar funcionário</h1>
+
+        <label>Cargo:</label>
+        <select id="cargo-func-edit" class="input">
+          <option value="" selected disabled hidden>Selecione um cargo</option>
+          <option value="assistente">Assistente</option>
+          <option value="dentista">Dentista</option>
+          <option value="adm">Administrador</option>
+        </select>
+
+        <div>
+          <button type="submit" class="button btn-editar-func">Editar</button>
+          <button type="button" class="button btn-cancelar-editar-func">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
 
     <footer></footer>
 

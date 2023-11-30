@@ -8,7 +8,7 @@
     width: 100%;
     height: 100vh;
     background-color: var(--branco);
-
+    position: relative;
 }
 
 .div-pesquisa-funcionarios{
@@ -197,7 +197,7 @@
     gap: 10px;
 }
 
-.btn-editar-func{
+.btn-modal-editar-func{
     width: 45%;
     padding: 10px;
     border: none;
@@ -221,7 +221,7 @@
     cursor: pointer;
 }
 
-.btn-editar-func:hover{
+.btn-modal-editar-func:hover{
   
     background-color: var(--marino);
     color: var(--branco);
@@ -234,7 +234,7 @@
     transition: 0.2s ease;
 }
 
-.btn-editar-func:active{
+.btn-modal-editar-func:active{
     width: 35%;
 }
 
@@ -244,9 +244,146 @@
 
 /* 
     --------------------------------------------------------------------------------------------------
+                                    MODAL CADASTRO FUNCIONÁRIO.
+    --------------------------------------------------------------------------------------------------
+*/
+
+.div-modal-cad-func{
+    display: none;
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    bottom: 140%;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.modal-cad-func{
+
+    width: 30vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--gradiente2);
+    display: flex; /* Flex */
+    flex-direction: column;
+    z-index: 1;
+    padding: 30px;
+    color: var(--branco);
+    border-radius: 15px;
+    
+
+}
+
+.modal-cad-func label{
+    color: var(--branco);
+}
+
+.modal-cad-func div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-cadastrar-func{
+    width: 150px;
+    margin-right: 10px;
+    background-color: var(--marino);
+    color: var(--branco);
+}
+
+.btn-cadastrar-func:hover{
+    background-color: var(--verde);
+    color: var(--marino);
+}
+
+.btn-cadastrar-func:active{
+    background-color: var(--branco);
+    transition: 0;
+}
+
+.btn-cancelar-cadastro-func:active{
+    background-color: var(--branco);
+    color: var(--vermelho);
+}
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                    MODAL EDITAR FUNCIONÁRIO.
+    --------------------------------------------------------------------------------------------------
+*/
+
+.div-modal-editar-func{
+    display: none;
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    bottom: 140%;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.modal-editar-func{
+    width: 30vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--gradiente2);
+    display: flex; /* Flex */
+    flex-direction: column;
+    z-index: 1;
+    padding: 30px;
+    color: var(--branco);
+    border-radius: 15px;
+}
+
+.modal-editar-func label{
+    color: var(--branco);
+}
+
+.modal-editar-func div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-editar-func{
+    width: 150px;
+    margin-right: 10px;
+    background-color: var(--marino);
+    color: var(--branco);
+}
+
+.btn-editar-func:hover{
+    background-color: var(--verde);
+    color: var(--marino);
+}
+
+.btn-editar-func:active{
+    background-color: var(--branco);
+    transition: 0;
+}
+
+.btn-cancelar-editar-func:active{
+    background-color: var(--branco);
+    color: var(--vermelho);
+}
+
+/* 
+    --------------------------------------------------------------------------------------------------
                                     MEDIA QUERIES
     --------------------------------------------------------------------------------------------------
 */
+
+@media (max-width: 1045px) {
+    .modal-cad-func{
+        width: 70vw;
+    }
+
+    .modal-editar-func{
+        width: 70vw;
+    }
+}
 
 @media (max-width: 750px) {
     .barra-pesquisa-func{
@@ -257,6 +394,19 @@
 
         width: 20%;
 
+    }
+
+}
+
+@media (max-width: 450px){
+    .modal-cad-func{
+        width: 85%;
+        top: 50%;
+    }
+
+    .modal-editar-func{
+        width: 85%;
+        top: 50%;
     }
 }
 
