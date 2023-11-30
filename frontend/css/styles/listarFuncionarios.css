@@ -1,3 +1,9 @@
+/* 
+    --------------------------------------------------------------------------------------------------
+                                Sessão de pesquisa
+    --------------------------------------------------------------------------------------------------
+*/
+
 .section-funcionarios{
     width: 100%;
     height: 100vh;
@@ -8,7 +14,7 @@
 .div-pesquisa-funcionarios{
 
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     margin-top: 120px;
 
 
@@ -30,6 +36,8 @@
 
 .barra-pesquisa-func{
     width: 45vw;
+    font-size: 18px;
+    padding-left: 15px;
 }
 
 .btn-pesquisar-func{
@@ -37,11 +45,14 @@
     width: 15%;
 
     position: absolute;
-    right: 0.5px;
+    top: 0.5px;
+    right: 1px;
 
-    padding: 6px;
+    padding: 9.5px;
 
     background-color: var(--marino);
+
+    border: none;
     
 
     border-radius: 0 20px 20px 0;
@@ -52,6 +63,12 @@
     background-color: var(--verde);
     color: var(--marino);
 }
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                Botão cadastro de funcionários
+    --------------------------------------------------------------------------------------------------
+*/
 
 .div-btn-cad-func{
     width: fit-content;
@@ -70,8 +87,165 @@
 
 .btn-modal-cad-func{
     margin-left: 30px;
+    transition: transform 0.5s ease;
 }
 
+.div-btn-cad-func:not(:hover) .btn-modal-cad-func  {
+    transform: rotate(0deg); /* Garantindo que a transformação seja aplicada quando o mouse não está sobre a div */
+    animation: girar180Reverso 0.5s ease-in-out;
+}
+
+.div-btn-cad-func:hover .btn-modal-cad-func {
+    animation: girar180 0.5s ease-in-out;
+}
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                    Filtros
+    --------------------------------------------------------------------------------------------------
+*/
+
+.div-filtros-func{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+    z-index: 1;
+}
+
+.filtro-func{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--marino);
+
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+}
+
+.filtro-ativo{
+    background-color: var(--marino);
+    color: var(--branco);
+}
+
+.filtro-func:hover{
+    background-color: var(--verde);
+    color: var(--marino);
+    transition: 0.3s ease-in-out;
+}
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                    Exibição dos funcionários
+    --------------------------------------------------------------------------------------------------
+*/
+
+.div-exibir-func{
+    width: 100%;
+
+    background-color: var(--cinza);
+
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+.card-func{
+    width: 300px;
+    height: 300px;
+    margin: 30px 20px 30px 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    border-top: 10px solid #024959;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-card-nome-func{
+    margin: 20px;
+    font-size: 26px;
+}
+
+.p-email-func{
+    margin: 20px;
+    font-size: 22px;
+}
+
+.p-cargo-func{
+    margin: 20px;
+    font-size: 22px;
+}
+
+.div-card-func-btn{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-editar-func{
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--marino);
+    border: 5px solid var(--marino);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn-demitir-func{
+    width: 45%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--vermelho);
+    border: 5px solid var(--vermelho);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn-editar-func:hover{
+  
+    background-color: var(--marino);
+    color: var(--branco);
+    transition: 0.2s ease;
+}
+
+.btn-demitir-func:hover{
+    background-color: var(--vermelho);
+    color: var(--branco);
+    transition: 0.2s ease;
+}
+
+.btn-editar-func:active{
+    width: 35%;
+}
+
+.btn-demitir-func:active{
+    width: 35%;
+}
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                    MEDIA QUERIES
+    --------------------------------------------------------------------------------------------------
+*/
 
 @media (max-width: 750px) {
     .barra-pesquisa-func{
@@ -84,3 +258,30 @@
 
     }
 }
+
+
+/* 
+    --------------------------------------------------------------------------------------------------
+                                    ANIMAÇÕES
+    --------------------------------------------------------------------------------------------------
+*/
+
+@keyframes girar180 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+}
+  
+
+@keyframes girar180Reverso {
+    from {
+      transform: rotate(180deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
