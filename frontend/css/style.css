@@ -12,6 +12,7 @@
 @import url("/frontend/css/components/navCadastro.css"); /* navbar (cadastro cliente) */
 @import url("/frontend/css/components/navLogin.css"); /* navbar (login) */
 @import url("/frontend/css/components/input.css"); /* input */
+@import url("/frontend/css/components/option.css"); /* option */
 
 /* Importando estilização das telas */
 @import url("/frontend/css/styles/home.css"); /* home */
