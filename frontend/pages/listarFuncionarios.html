@@ -33,6 +33,7 @@
     </header>
 
     <section class="section-funcionarios">
+
       <div class="div-pesquisa-funcionarios">
         <h1>Funcionários</h1>
 
@@ -88,6 +89,8 @@
         <div class="card-func"></div>
       </div>
 
+      <!-- MODAL DE CADASTRO -->
+
       <div class="div-modal-cad-func">
         <form class="modal-cad-func">
           <h1>Novo colaborador</h1>
@@ -140,28 +143,37 @@
           </div>
         </form>
       </div>
+
+      <!-- FIM MODAL CADASTRO -->
+
+      <!-- MODAL EDITAR FUNCIONÁRIO -->
+
+      <div class="div-modal-editar-func">
+        <form class="modal-editar-func">
+          <h1>Editar funcionário</h1>
+  
+          <label>Cargo:</label>
+          <select id="cargo-func-edit" class="input">
+            <option value="" selected disabled hidden>Selecione um cargo</option>
+            <option value="assistente">Assistente</option>
+            <option value="dentista">Dentista</option>
+            <option value="adm">Administrador</option>
+          </select>
+  
+          <div>
+            <button type="submit" class="button btn-editar-func">Editar</button>
+            <button type="button" class="button btn-cancelar-editar-func">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- FIM MODAL EDITAR FUNCIONÁRIO -->
+
     </section>
 
-    <div class="div-modal-editar-func">
-      <form class="modal-editar-func">
-        <h1>Editar funcionário</h1>
-
-        <label>Cargo:</label>
-        <select id="cargo-func-edit" class="input">
-          <option value="" selected disabled hidden>Selecione um cargo</option>
-          <option value="assistente">Assistente</option>
-          <option value="dentista">Dentista</option>
-          <option value="adm">Administrador</option>
-        </select>
-
-        <div>
-          <button type="submit" class="button btn-editar-func">Editar</button>
-          <button type="button" class="button btn-cancelar-editar-func">
-            Cancelar
-          </button>
-        </div>
-      </form>
-    </div>
+    
 
     <footer></footer>
 

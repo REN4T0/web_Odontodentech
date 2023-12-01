@@ -1,0 +1,7 @@
+option {
+    /* Estilizando as opções dentro do select */
+    padding: 10px;
+    background-color: var(--marino);
+    color: var(--branco);
+    font-size: 18px;
+  }

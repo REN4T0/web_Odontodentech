@@ -1,3 +1,4 @@
+import { alterarFiltro } from "../modules/alteraFiltroFunc.js";
 /*
     -----------------------------------------------------------------------------------------------------
                                             CARREGAR FUNCIONÁRIOS
@@ -24,10 +25,18 @@ const botaoAbrirModalCadastro = document.querySelector(".div-btn-cad-func");
 const btnFecharModalCadastro = document.querySelector(".btn-cancelar-cadastro-func");
 
 // Exibindo modal de cadastro
-botaoAbrirModalCadastro.addEventListener('click', () => divModalcadastro.style.display = "flex");
+botaoAbrirModalCadastro.addEventListener('click', () => {
+    // Desabilitar o scroll da página
+    divModalcadastro.style.display = "flex";
+    document.body.style.overflow = 'hidden';
+});
 
 // Fechando modal
-btnFecharModalCadastro.addEventListener("click", () => divModalcadastro.style.display = "none");
+btnFecharModalCadastro.addEventListener("click", () => {
+    // Desabilitar o scroll da página
+    divModalcadastro.style.display = "none";
+    document.body.style.overflow = 'auto';
+});
 
 /*
     -----------------------------------------------------------------------------------------------------
@@ -46,7 +55,49 @@ const botaoAbrirModalEditar = document.querySelector(".btn-modal-editar-func");
 const btnFecharModalEditar = document.querySelector(".btn-cancelar-editar-func");
 
 // Exibindo modal de editar funcionário
-botaoAbrirModalEditar.addEventListener('click', () => modalEditar.style.display = "flex");
+botaoAbrirModalEditar.addEventListener('click', () => {
+    // Desabilitar o scroll da página
+    modalEditar.style.display = "flex";
+    document.body.style.overflow = 'hidden';
+
+})
 
 // Fechando modal
-btnFecharModalEditar.addEventListener("click", () => modalEditar.style.display = "none");
+btnFecharModalEditar.addEventListener("click", () => {
+
+    modalEditar.style.display = "none"
+    document.body.style.overflow = 'auto';
+
+});
+
+/*
+    -----------------------------------------------------------------------------------------------------
+                                            ANIMAÇÃO E FILTROS
+    -----------------------------------------------------------------------------------------------------
+*/
+document.addEventListener('click', async evento => {
+
+    // Selecionando um elemento HTML
+    const elemento = evento.target;
+
+    if (elemento.classList.contains("filtro-func")) {
+
+        // Alterando filtro
+        alterarFiltro(elemento);
+
+        // Puxando os dados de acordo com o filtro
+        if(elemento.textContent == "Todos") {
+            console.log('TODOS')
+        }
+
+        if(elemento.textContent == "Ativos") {
+            console.log('ATIVOS')
+        }
+
+        if(elemento.textContent == "Demitidos") {
+            console.log('DEMITIDOS')
+        }
+
+    }
+
+});

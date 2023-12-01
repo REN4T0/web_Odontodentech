@@ -249,20 +249,21 @@
 */
 
 .div-modal-cad-func{
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     width: 100%;
-    height: 150vh;
-    position: relative;
-    bottom: 140%;
+    height: 100%;
     z-index: 4;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.797);
 }
 
 .modal-cad-func{
 
     width: 30vw;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--gradiente2);
@@ -314,13 +315,14 @@
 */
 
 .div-modal-editar-func{
+    position: fixed;
+    top: 0;
+    left: 0;
     display: none;
     width: 100%;
-    height: 150vh;
-    position: relative;
-    bottom: 140%;
+    height: 100%;
     z-index: 4;
-    background-color: rgba(0, 0, 0, 0.61);
+    background-color: rgba(0, 0, 0, 0.797);
 }
 
 .modal-editar-func{
