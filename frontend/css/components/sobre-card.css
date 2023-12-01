@@ -1,20 +1,25 @@
 .sobre-card{
-    width: 25%;
-    margin: 50px;
-    
+    width: 18%;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     
     background: var(--gradiente2);
     border-radius: 20px;
+    
+    position: relative;
+    bottom: 0rem;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
 }
 
 .sobre-card-header{
     width: 70%;
 
     margin-top: 2rem;
-    padding: 20px;
+    padding: 5%;
     
     display: flex;
     flex-direction: column;
@@ -26,6 +31,7 @@
 
 .sobre-card-img{
     margin-bottom: 20px;
+    width: 70%;
 }
 
 .sobre-card-text{
@@ -41,6 +47,24 @@
     padding: 2rem;
 }
 
+.sobre-card-icon{
+    width: 35%;
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+}
+
 .sobre-card:hover{
-    background: linear-gradient(149deg, #F2CF66 0%, #D9A84E 25.1%, #8C5E26 50.1%, #BF843B 77.19%, #73461F 100%);
+    background: var(--dourado);
+    bottom: 1rem;
+}
+
+.sobre-card-icon:hover{
+    width: 30%;
+}
+
+@media(max-width: 1130px){
+    .sobre-card{
+        width: 20rem;
+        margin: 2rem;
+    }
 }

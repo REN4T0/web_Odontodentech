@@ -6,20 +6,23 @@
 /* Seção de explicação da DENTECH */
 #sobre_explanation{
     width: 100%;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    gap: 50px 10px;
+    /* gap: 50px 10px; */
     flex-shrink: 0;
     flex-wrap: wrap;
 }
 
 #sobre_explanation_title{
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
+
+    margin-top: 5rem;
+    margin-bottom: 1rem;
 
     color: var(--verde);
 }
@@ -101,7 +104,8 @@
     font-size: 50px;
     font-weight: normal;
 
-    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 
     color: var(--branco);
 }
@@ -121,8 +125,10 @@
     font-size: 25px;
     font-weight: normal;
 
-    text-align: center;
     line-height: 37px;
+
+    padding-left: 20px;
+    padding-right: 20px;
 
     color: var(--branco);
 }
@@ -134,10 +140,94 @@
 
 .sobre-purposes-minitext{
     margin-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     font-size: 15px;
-    text-align: center;
 
     line-height: 22px;
     color: var(--branco);
 }
+
+
+
+/* Seção que mostra os desenvolvedores */
+#sobre_devs{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--gradiente1);
+
+    margin-top: 5rem;
+    border-radius: 10rem 10rem 0 0;
+}
+
+#sobre_devs_title{
+    margin-top: 4rem;
+    font-size: 50px;
+    font-weight: normal;
+    color: var(--marino);
+}
+
+#sobre_devs_row{
+    width: 100%;
+
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+@media(max-width: 1130px){
+    #sobre_purposes_container{
+        flex-direction: column;
+    }
+
+    .sobre-purposes-column{
+        width: 100%;
+    }
+
+    .sobre-purposes-midbox{
+        margin-bottom: 2rem;
+    }
+
+    .sobre-purposes-title{
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width: 830px){
+    #sobre_explanation_title{
+        font-size: 25px;
+        margin-top: 3rem;
+    }
+    
+    #sobre_explanation_text{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    #sobre_porpuses_maintitle{
+        font-size: 25px;
+    }
+
+    .sobre-purposes-title{
+        font-size: 25px;
+    }
+    
+    .sobre-purposes-text{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    /* 
+    */
+}
+
