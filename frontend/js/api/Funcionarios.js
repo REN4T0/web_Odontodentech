@@ -48,7 +48,28 @@ export default class Funcionarios {
     async buscar(token, id = null) {
         try {
 
-            const req = await fetch(`${url}/funcionarios?id=${id}&nome=${this.nome}`, {
+            const req = await fetch(`${url}/funcionarios?nome=${this.nome}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authorization": `Bearer ${token}`
+                }
+            });
+
+            const res = await req.json();
+
+            return res;
+
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    async buscarEspecifico(token, id) {
+        try {
+
+            const req = await fetch(`${url}/funcionarios?id=${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -76,7 +97,7 @@ export default class Funcionarios {
                     "Content-Type": "application/json",
                     "authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({cargo: cargo})
+                body: JSON.stringify({ cargo: cargo })
             });
 
             const res = await req.json();
@@ -141,7 +162,7 @@ export default class Funcionarios {
                     "Content-type": "application/json",
                     "authorization": `Bearer ${token}`
                 },
-                body: JSON.stringify({senha: novaSenha})
+                body: JSON.stringify({ senha: novaSenha })
             });
 
             const res = await req.json();
