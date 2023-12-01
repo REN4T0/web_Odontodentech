@@ -1,3 +1,4 @@
+import { alterarFiltro } from "../modules/alteraFiltroFunc.js";
 /*
     -----------------------------------------------------------------------------------------------------
                                             CARREGAR FUNCIONÁRIOS
@@ -66,5 +67,37 @@ btnFecharModalEditar.addEventListener("click", () => {
 
     modalEditar.style.display = "none"
     document.body.style.overflow = 'auto';
+
+});
+
+/*
+    -----------------------------------------------------------------------------------------------------
+                                            ANIMAÇÃO E FILTROS
+    -----------------------------------------------------------------------------------------------------
+*/
+document.addEventListener('click', async evento => {
+
+    // Selecionando um elemento HTML
+    const elemento = evento.target;
+
+    if (elemento.classList.contains("filtro-func")) {
+
+        // Alterando filtro
+        alterarFiltro(elemento);
+
+        // Puxando os dados de acordo com o filtro
+        if(elemento.textContent == "Todos") {
+            console.log('TODOS')
+        }
+
+        if(elemento.textContent == "Ativos") {
+            console.log('ATIVOS')
+        }
+
+        if(elemento.textContent == "Demitidos") {
+            console.log('DEMITIDOS')
+        }
+
+    }
 
 });
