@@ -1,4 +1,5 @@
 import { alterarFiltro } from "../modules/alteraFiltroFunc.js";
+import Funcionarios from "../api/Funcionarios.js";
 /*
     -----------------------------------------------------------------------------------------------------
                                             CARREGAR FUNCIONÁRIOS
@@ -14,9 +15,6 @@ window.addEventListener("load", async () => {});
 
 // Div modal
 const divModalcadastro = document.querySelector(".div-modal-cad-func");
-
-// Modal
-const modalCadastro = document.querySelector(".modal-cad-func");
 
 // Botão para abrir modal
 const botaoAbrirModalCadastro = document.querySelector(".div-btn-cad-func");
@@ -101,3 +99,41 @@ document.addEventListener('click', async evento => {
     }
 
 });
+
+/*
+    -----------------------------------------------------------------------------------------------------
+                                            FORMULÁRIO DE CADASTRO
+    -----------------------------------------------------------------------------------------------------
+*/
+const formCadastro = document.querySelector(".modal-cad-func");
+
+// Pegando os ddados do formulário de cadastro
+formCadastro.addEventListener("submit", async evento => {
+
+    evento.preventDefault();
+
+    
+    const nome = formCadastro.querySelector("#nome-func").value;
+    const sobrenome = formCadastro.querySelector("#sobrenome-func").value;
+    const email = formCadastro.querySelector("#email-func").value;
+    const cargo = formCadastro.querySelector("#cargo-func-cad").value;
+    const status = "ativo"
+
+    // Instânciando um novo funcionário para cadastrá-lo
+    const funcionario = new Funcionarios(nome, sobrenome, cargo, status, email);
+
+    // Token de autenticação necessário para cadastrar um novo funcionário.
+    const token = localStorage.getItem("token");
+    
+    const cadastro = await funcionario.cadastrar(token);
+
+    alert(cadastro.msg);
+
+});
+
+
+/*
+    -----------------------------------------------------------------------------------------------------
+                                            FORMULÁRIO DE EDIÇÃO
+    -----------------------------------------------------------------------------------------------------
+*/
