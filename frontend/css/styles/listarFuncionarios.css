@@ -357,7 +357,7 @@
 }
 
 .btn-editar-func{
-    width: 150px;
+    width: 100% !important;
     margin-right: 10px;
     background-color: var(--marino);
     color: var(--branco);
@@ -373,9 +373,29 @@
     transition: 0;
 }
 
+.btn-cancelar-editar-func{
+    width: 100% !important;
+}
+
 .btn-cancelar-editar-func:active{
     background-color: var(--branco);
     color: var(--vermelho);
+}
+
+.btn-redefinir-senha{
+    background-color: var(--marino) !important;
+    border: none !important;
+    width: 100% !important;
+}
+
+.btn-redefinir-senha:hover{
+    background-color: var(--verde) !important;
+    color: var(--marino) !important;
+}
+
+.btn-redefinir-senha:active{
+    background-color: var(--branco) !important;
+    transition: 0;
 }
 
 /* 

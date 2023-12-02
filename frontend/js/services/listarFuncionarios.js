@@ -97,6 +97,7 @@ document.addEventListener('click', async evento => {
     // Selecionando um elemento HTML
     const elemento = evento.target;
 
+
     // Token para permissão de requisição
     const token = localStorage.getItem("token");
 
@@ -146,6 +147,8 @@ document.addEventListener('click', async evento => {
 
     if (elemento.classList.contains("btn-modal-editar-func")) {
 
+        localStorage.setItem("idFunc", elemento.value);
+
         // Desabilitar o scroll da página
         modalEditar.style.display = "flex";
         document.body.style.overflow = 'hidden';
@@ -180,7 +183,7 @@ document.addEventListener('click', async evento => {
 
     }
 
-    if(elemento.classList.contains("btn-pesquisar-func")) {
+    if (elemento.classList.contains("btn-pesquisar-func")) {
 
         const nome = document.querySelector(".barra-pesquisa-func").value;
 
@@ -191,6 +194,17 @@ document.addEventListener('click', async evento => {
         console.log(pesquisa);
 
         gerarCardsFunc(pesquisa.dados);
+
+    }
+
+    if (elemento.classList.contains("btn-redefinir-senha")) {
+
+        const id = localStorage.getItem("idFunc");
+        const token = localStorage.getItem("token");
+
+        const reset = await funcionario.resetarSenha(id, token);
+
+        alert(reset.msg);
 
     }
 
