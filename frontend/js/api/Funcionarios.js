@@ -45,10 +45,31 @@ export default class Funcionarios {
         }
     }
 
-    async buscar(token, id = null) {
+    async buscar(token) {
         try {
 
-            const req = await fetch(`${url}/funcionarios?nome=${this.nome}`, {
+            const req = await fetch(`${url}/funcionarios?`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authorization": `Bearer ${token}`
+                }
+            });
+
+            const res = await req.json();
+
+            return res;
+
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
+
+    async buscarNome(token, nome) {
+        try {
+
+            const req = await fetch(`${url}/funcionarios?nome=${nome}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

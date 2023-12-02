@@ -168,11 +168,29 @@ document.addEventListener('click', async evento => {
 
     if (elemento.classList.contains("btn-demitir-func")) {
 
-        const demitir = await funcionario.inativar(elemento.value, token);
+        const verificacao = confirm("Tem certeza que deseja fazer isso?");
 
-        alert(demitir.msg);
+        if (verificacao) {
+            const demitir = await funcionario.inativar(elemento.value, token);
 
-        location.reload();
+            alert(demitir.msg);
+
+            location.reload();
+        }
+
+    }
+
+    if(elemento.classList.contains("btn-pesquisar-func")) {
+
+        const nome = document.querySelector(".barra-pesquisa-func").value;
+
+        const funcionario = new Funcionarios();
+
+        const pesquisa = await funcionario.buscarNome(token, nome);
+
+        console.log(pesquisa);
+
+        gerarCardsFunc(pesquisa.dados);
 
     }
 
