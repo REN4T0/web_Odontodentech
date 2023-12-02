@@ -54,6 +54,8 @@
     background-color: var(--verde);
 }
 
+
+
 /* Seção onde estarão os serviços oferecidos */
 #home_services{
     width: 90%;
@@ -120,7 +122,11 @@
 
     background: var(--gradiente1);
     border: none;
+
+    width: 15rem;
 }
+
+
 
 /* Seção onde estarão os princípios da Dentech */
 #home_principles{
@@ -165,6 +171,9 @@
     padding-right: 25px;
     padding-left: 25px;
 }
+
+
+
 
 /* Responsividade */
 @media(max-width: 1112px){

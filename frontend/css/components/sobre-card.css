@@ -68,3 +68,10 @@
         margin: 2rem;
     }
 }
+
+@media(max-width: 830px){
+    .sobre-card{
+        width: 20rem;
+        margin: 2rem;
+    }
+}

@@ -6,13 +6,11 @@
 /* Seção de explicação da DENTECH */
 #sobre_explanation{
     width: 100%;
-    /* margin-top: 5rem; */
     
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    /* gap: 50px 10px; */
     flex-shrink: 0;
     flex-wrap: wrap;
 }
@@ -175,7 +173,7 @@
 #sobre_devs_row{
     width: 100%;
 
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
 
     display: flex;
@@ -185,8 +183,9 @@
 }
 
 
-
+/* Responsividade */
 @media(max-width: 1130px){
+    /* Alteração na seção de propostas */
     #sobre_purposes_container{
         flex-direction: column;
     }
@@ -204,7 +203,23 @@
     }
 }
 
+
+
+@media(max-width: 600px){
+    /* Eliminando a imagem */
+    #sobre_img{
+        display: none;
+    }
+
+    #sobre_explanation{
+        margin-top: 5rem;
+    }
+}
+
+
+
 @media(max-width: 830px){
+    /* Alteração no tamanho da fonte dos títulos e textos */
     #sobre_explanation_title{
         font-size: 25px;
         margin-top: 3rem;
@@ -227,7 +242,16 @@
         font-size: 20px;
         line-height: 30px;
     }
-    /* 
-    */
+
+    
+    #sobre_devs_title{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    /* Alteração na borda da seção dos desenvolvedores */
+    #sobre_devs{
+        border-radius: 0;
+    }
 }
 
