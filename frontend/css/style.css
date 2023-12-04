@@ -21,8 +21,5 @@
 @import url("/frontend/css/styles/login.css"); /* login */
 @import url("/frontend/css/styles/sobre.css"); /* sobre */
 @import url("/frontend/css/styles/listarFuncionarios.css"); /* Listar funcionários */
-<<<<<<< HEAD
 @import url("/frontend/css/styles/criarConsulta.css"); /* criar consultas */
-=======
 @import url("/frontend/css/styles/agendarConsulta.css"); /* Agendar conuslta */
->>>>>>> 6264a42b86de109cea36325779328f7f85579bd2
