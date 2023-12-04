@@ -1,0 +1,50 @@
+.filter-button{
+    width: 18rem;
+    height: 15rem;
+    margin: 20px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--cinza);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.filter-button-text{
+    font-size: 35px;
+    font-weight: bold;
+
+    color: var(--branco);
+}
+
+.filter-button-text-marino{
+    color: var(--marino);
+}
+
+.filter-button-ciano{
+    background-color: var(--ciano);
+}
+
+.filter-button-verde{
+    background-color: var(--verde);
+}
+
+.filter-button-vermelho{
+    background-color: var(--vermelho);
+}
+
+.filter-button:hover{
+    opacity: 0.7;
+}
+
+.filter-button:active{
+    width: 17.5rem;
+    height: 14.5rem;
+}
+

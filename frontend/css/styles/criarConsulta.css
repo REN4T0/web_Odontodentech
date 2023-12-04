@@ -1,0 +1,21 @@
+.criaConsulta-conteudo{
+    margin-top: 7rem;
+}
+
+.criaConsulta-filter{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--marino);
+}
+
+.criaConsulta-filter-row{
+    width: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+}

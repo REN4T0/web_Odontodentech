@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <title>Criar Consultas</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img class="logo" src="/frontend/images/img/nav_logo.png" onclick="rotas('home')" alt="logo da dentech">
+
+            <ul class="nav-list">
+                <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+                <li><a class="nav-link" onclick="rotas('consultas')">Consultas</a></li>
+                <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+                <div id="nav-button">
+                    <button id="cad-button" class="button" onclick="rotas('cadastro')">Cadastre-se</button>
+                    <button id="log-button" class="button" onclick="rotas('login')">Login</button>
+                </div>
+            </ul>
+
+            <button class="hamburguer"></button>
+        </nav>
+    </header>
+
+    <main class="criaConsulta-conteudo">
+        <h1>Criar Consultas</h1>
+
+        <input type="month" name="mesAno" id="mesAno" class="input">
+
+        <section class="criaConsulta-filter">
+            <div>
+                <button>Nova consulta</button>
+            </div>
+
+            <div class="criaConsulta-filter-row">
+                <button class="filter-button">
+                    <img src="/frontend/images/icons/event_available.svg" alt="">
+                    <p class="filter-button-text filter-button-text-marino">Disponíveis</p>
+                </button>
+    
+                <button class="filter-button filter-button-ciano">
+                    <img src="/frontend/images/icons/alarm.svg" alt="">
+                    <p class="filter-button-text">Agendadas</p>
+                </button>
+    
+                <button class="filter-button filter-button-verde">
+                    <img src="/frontend/images/icons/check_circle.svg" alt="">
+                    <p class="filter-button-text">Realizadas</p>
+                </button>
+    
+                <button class="filter-button filter-button-vermelho">
+                    <img src="/frontend/images/icons/cancel.svg" alt="">
+                    <p class="filter-button-text">Canceladas</p>
+                </button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

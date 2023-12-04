@@ -13,6 +13,7 @@
 @import url("/frontend/css/components/navLogin.css"); /* navbar (login) */
 @import url("/frontend/css/components/input.css"); /* input */
 @import url("/frontend/css/components/option.css"); /* option */
+@import url("/frontend/css/components/filterButton.css"); /* botão de filtro */
 
 /* Importando estilização das telas */
 @import url("/frontend/css/styles/home.css"); /* home */
@@ -20,3 +21,4 @@
 @import url("/frontend/css/styles/login.css"); /* login */
 @import url("/frontend/css/styles/sobre.css"); /* sobre */
 @import url("/frontend/css/styles/listarFuncionarios.css"); /* Listar funcionários */
+@import url("/frontend/css/styles/criarConsulta.css"); /* criar consultas */
