@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar consultas - Dentech</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+          <img
+            class="logo"
+            src="/frontend/images/img/nav_logo.png"
+            onclick="rotas('home')"
+            alt="logo da dentech"
+          />
+  
+          <ul class="nav-list">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li>
+              <a class="nav-link" onclick="rotas('consultas')">Consultas</a>
+            </li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li>
+              <a class="nav-link link-sair" onclick="rotas('home')">Sair</a>
+            </li>
+          </ul>
+  
+          <button class="hamburguer"></button>
+        </nav>
+      </header>
+
+      <script type="module" src="../js/navbar/index.js"></script>
+
+</body>
+</html>

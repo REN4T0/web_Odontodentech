@@ -90,7 +90,7 @@
     display: block;
     width: 30px;
     height: 3px;
-    background-color: var(--branco);
+    background: var(--marino);
     margin-top: 5px;
     position: relative;
     transition: 0.5s ;
@@ -114,7 +114,7 @@
 
 /* Responsividade */
 
-/* @media (max-width: 1260px){
+ @media (max-width: 1260px){
     #nav-button{
         width: 30% !important;
     }
@@ -124,7 +124,7 @@
     #nav-button{
         width: 40% !important;
     }
-} */
+}
 
 
 @media (max-width: 1024px) {
@@ -139,7 +139,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--azul1);
+        background: var(--gradiente1);
         clip-path: circle(100px at 99% -20%);
         transition: 0.5s ease-out;
         flex-direction: column;
