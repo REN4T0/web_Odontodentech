@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/frontend/css/style.css">
     <script src="/frontend/js/rotas.js" defer></script>
     <script src="/frontend/js/scripts/modal.js" defer></script>
+    <script type="module" src="/frontend/js/services/criarConsulta.js" defer></script>
     <title>Criar Consultas</title>
 </head>
 <body>
@@ -40,22 +41,22 @@
         <section class="criaConsulta-filter">
             <div class="criaConsulta-filter-row">
                 <button class="filter-button">
-                    <img src="/frontend/images/icons/event_available.svg" alt="">
+                    <img class="filter-button-img" src="/frontend/images/icons/event_available.svg" alt="">
                     <p class="filter-button-text filter-button-text-marino">Disponíveis</p>
                 </button>
     
                 <button class="filter-button filter-button-ciano">
-                    <img src="/frontend/images/icons/alarm.svg" alt="">
+                    <img class="filter-button-img" src="/frontend/images/icons/alarm.svg" alt="">
                     <p class="filter-button-text">Agendadas</p>
                 </button>
     
                 <button class="filter-button filter-button-verde">
-                    <img src="/frontend/images/icons/check_circle.svg" alt="">
+                    <img  class="filter-button-img" src="/frontend/images/icons/check_circle.svg" alt="">
                     <p class="filter-button-text">Realizadas</p>
                 </button>
     
                 <button class="filter-button filter-button-vermelho">
-                    <img src="/frontend/images/icons/cancel.svg" alt="">
+                    <img  class="filter-button-img" src="/frontend/images/icons/cancel.svg" alt="">
                     <p class="filter-button-text">Canceladas</p>
                 </button>
             </div>
