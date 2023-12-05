@@ -20,8 +20,8 @@
     align-items: center;
     flex-direction: column;
 
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     background: var(--gradiente1);
     border-radius: 20px;
@@ -89,4 +89,14 @@
 
     font-weight: bold;
     color: var(--branco);
+    margin: 0px 0px 0px 10px !important;
+}
+
+@media (max-width: 800px) {
+
+    .modal{
+        width: 90%;
+        
+    }
+
 }
