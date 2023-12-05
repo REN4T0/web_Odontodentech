@@ -138,11 +138,13 @@
 
 .div-exibir-func{
     width: 100%;
-    min-height: 90vh;
+    height: auto;
     background-color: var(--cinza);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .card-func{

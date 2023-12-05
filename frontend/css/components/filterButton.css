@@ -44,7 +44,6 @@
 }
 
 .filter-button:active{
-    width: 17.5rem;
-    height: 14.5rem;
+    width: 12.5rem;
+    height: 11.5rem;
 }
-

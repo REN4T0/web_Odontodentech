@@ -1,0 +1,35 @@
+.cards{
+    width: 300px;
+    height: 330px;
+    margin: 30px 20px 30px 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    border-top: 10px solid var(--marino);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.cards-inativo{
+    width: 330px;
+    height: 310px;
+    margin: 30px 20px 30px 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    border-top: 10px solid var(--vermelho);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.titulo-card{
+    margin: 20px;
+    font-size: 26px;
+}
+
+
+.div-card-btn{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}

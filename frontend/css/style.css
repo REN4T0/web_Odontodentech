@@ -17,7 +17,9 @@
 @import url("/frontend/css/components/plusButton.css"); /* botão com o sinal de + */
 @import url("/frontend/css/components/modal.css"); /* modal */
 @import url("/frontend/css/components/label.css"); /* label */
+@import url("/frontend/css/components/cards.css"); /* cards */
 @import url("/frontend/css/components/header.css"); /* cabeçalhos das telas de funcionário e criar consultas */
+
 
 /* Importando estilização das telas */
 @import url("/frontend/css/styles/home.css"); /* home */
