@@ -14,7 +14,7 @@
 }
 
 .criaConsulta-box-button{
-    margin-left: 5rem;
+    margin-left: 2rem;
     margin-bottom: 3rem;
     
     display: flex;
@@ -43,4 +43,32 @@
 
     background-color: var(--cinza);
     box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 730px){
+    .criaConsulta-box-button{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 520px){
+    .criaConsulta-filter-row{
+        width: 60%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 390px){
+    .criaConsulta-filter-row{
+        width: 85%;
+    }
+}
+
+@media (max-width: 275px){
+    .criaConsulta-filter-row{
+        width: 100%;
+    }
 }
