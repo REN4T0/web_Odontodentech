@@ -33,7 +33,9 @@ window.addEventListener("load", async () => {
 */
 
 // Div modal
-const divModalcadastro = document.querySelector(".div-modal-cad-func");
+// const divModalcadastro = document.querySelector(".div-modal-cad-func");
+
+const divModalcadastro = document.querySelector(".fundo-modal");
 
 // Botão para abrir modal
 const botaoAbrirModalCadastro = document.querySelector(".div-btn-cad-func");
@@ -215,7 +217,7 @@ document.addEventListener('click', async evento => {
                                             FORMULÁRIO DE CADASTRO
     -----------------------------------------------------------------------------------------------------
 */
-const formCadastro = document.querySelector(".modal-cad-func");
+const formCadastro = document.querySelector(".modal");
 
 // Pegando os ddados do formulário de cadastro
 formCadastro.addEventListener("submit", async evento => {

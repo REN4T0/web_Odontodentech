@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/frontend/css/style.css">
+    <script src="/frontend/js/rotas.js" defer></script>
+    <script src="/frontend/js/scripts/modal.js" defer></script>
     <title>Criar Consultas</title>
 </head>
 <body>
@@ -26,15 +28,16 @@
     </header>
 
     <main class="criaConsulta-conteudo">
-        <h1>Criar Consultas</h1>
+        <h1 class="maintitle">Criar Consultas</h1>
 
-        <input type="month" name="mesAno" id="mesAno" class="input">
+        <input type="month" name="mesAno" id="mesAno" class="input input-search">
+
+        <div class="criaConsulta-box-button">
+            <button class="plus-button plus-button-verde" onclick="abreModal('criarConsultas')">+</button>
+            <p class="plus-button-text">Nova consulta</p>
+        </div>
 
         <section class="criaConsulta-filter">
-            <div>
-                <button>Nova consulta</button>
-            </div>
-
             <div class="criaConsulta-filter-row">
                 <button class="filter-button">
                     <img src="/frontend/images/icons/event_available.svg" alt="">
@@ -57,7 +60,44 @@
                 </button>
             </div>
         </section>
+
+        <section class="criaConsulta-container">
+
+        </section>
     </main>
+
+    <div class="fundo-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Nova consulta</h2>
+                <p class="modal-text">Informe os dados obrigatórios abaixo</p>
+            </div>
+
+            <div class="modal-input-box">
+                <label for="profissional">Profissional</label>
+                <select name="profissional" id="profissional" class="input">
+                    <option value="" disabled hidden selected>Selecione...</option>
+                </select>
+            </div>
+
+            <div class="modal-input-box">
+                <label for="servico">Serviços</label>
+                <select name="servico" id="servicos" class="input">
+                    <option value="" disabled hidden selected>Selecione...</option>
+                </select>
+            </div>
+
+            <div class="modal-input-box">
+                <label for="datetime">Data e Hora</label>
+                <input type="datetime-local" name="datetime" id="datetime" class="input mid-input">
+            </div>
+
+            <div class="modal-button-box">
+                <button class="button modal-button-marino">Criar</button>
+                <button class="button modal-button-cancel" onclick="fechaModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

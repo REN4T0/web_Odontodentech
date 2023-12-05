@@ -35,12 +35,12 @@
     <section class="section-funcionarios">
 
       <div class="div-pesquisa-funcionarios">
-        <h1>Funcionários</h1>
+        <h1 class="maintitle">Funcionários</h1>
 
         <div class="div-input-pesquisa-btn">
           <input
             type="text"
-            class="barra-pesquisa-func input"
+            class="barra-pesquisa-func input input-search"
             placeholder="Procure por um funcionário..."
             autofocus
           />
@@ -51,12 +51,8 @@
         </div>
 
         <div class="div-btn-cad-func">
-          <img
-            class="btn-modal-cad-func"
-            src="../images/icons/plus-circle-fill.svg"
-            alt="Imagem com o sinal de adição"
-          />
-          <p>Novo funcionário</p>
+          <button class="plus-button btn-modal-cad-func">+</button>
+          <p class="plus-button-text">Novo funcionário</p>
         </div>
       </div>
 
@@ -71,7 +67,7 @@
       </div>
 
       <!-- MODAL DE CADASTRO -->
-
+<!-- 
       <div class="div-modal-cad-func">
         <form class="modal-cad-func">
           <h1>Novo colaborador</h1>
@@ -123,6 +119,71 @@
             </button>
           </div>
         </form>
+      </div> -->
+
+      <div class="fundo-modal">
+        <form class="modal">
+          <div class="modal-header">
+            <h1 class="modal-title">Novo colaborador</h1>
+            <p class="modal-text">Informe os dados obrigatórios abaixo</p>
+          </div>
+
+          <div class="modal-input-box">
+            <label>Nome</label>
+            <input
+              type="text"
+              class="input"
+              required
+              id="nome-func"
+              placeholder="Digite o nome aqui..."
+              autofocus
+            />
+          </div>
+
+          <div class="modal-input-box">
+            <label>Sobrenome</label>
+            <input
+              type="text"
+              class="input"
+              id="sobrenome-func"
+              required
+              placeholder="Digite o nome aqui..."
+            />
+          </div>
+
+          <div class="modal-input-box">
+            <label>E-mail</label>
+            <input
+              type="email"
+              class="input"
+              id="email-func"
+              required
+              placeholder="Digite o e-mail aqui..."
+            />
+          </div>
+
+          <div class="modal-input-box">
+            <label>Cargo</label>
+            <select id="cargo-func-cad" class="input">
+              <option value="" selected disabled hidden>
+                Selecione um cargo
+              </option>
+              <option value="assistente">Assistente</option>
+              <option value="dentista">Dentista</option>
+              <option value="adm">Administrador</option>
+            </select>
+          </div>
+
+          <div class="modal-button-box">
+            <button type="submit" class="button btn-cadastrar-func modal-button-marino">
+              Cadastrar
+            </button>
+            
+            <button type="button" class="button btn-cancelar-cadastro-func modal-button-cancel">
+              Cancelar
+            </button>
+          </div>
+        </form>
       </div>
 
       <!-- FIM MODAL CADASTRO -->
@@ -160,6 +221,6 @@
     <footer></footer>
 
     <script type="module" src="../js/services/listarFuncionarios.js"></script>
-    <script type="module" src="../js/navbar/index.js"></script>
+    <script type="module" src="../js/scripts/navbar.js"></script>
   </body>
 </html>
