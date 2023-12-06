@@ -92,11 +92,51 @@
     margin: 0px 0px 0px 10px !important;
 }
 
-@media (max-width: 800px) {
-
+@media (max-width: 1000px) {
     .modal{
-        width: 90%;
-        
+        width: 70%;
+    }
+}
+
+@media(max-width: 730px){
+    .modal-button-cancel{
+        font-size: 13px;
+        height: 2.5rem;
+        width: 7rem;
     }
 
+    .modal-button-marino{
+        font-size: 13px;
+        height: 2.5rem;
+        width: 7rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .modal{
+        width: 90%;
+    }
+
+    .modal-title{
+        font-size: 25px;
+    }
+
+    .modal-text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 330px) {
+    .modal{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .modal-title{
+        font-size: 25px;
+    }
+
+    .modal-text{
+        font-size: 12px;
+    }
 }

@@ -11,10 +11,6 @@
     width: 50%;
 }
 
-/* .input:focus{
-    border-color: var(--marino);
-} */
-
 @media(max-width: 730px){
     .input{
         font-size: 13px;
