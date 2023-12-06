@@ -20,7 +20,8 @@ export default class Consultas {
             const obj = {
                 data: this.data,
                 horario: this.horario,
-                idDentista: this.idDentista
+                idDentista: this.idDentista,
+                idServico: this.idServico
             };
 
             const req = await fetch(`${url}/consultas`, {
@@ -42,10 +43,12 @@ export default class Consultas {
         }
     };
 
-    async buscar(token, idConsulta = null, idCliente = null, idDentista = null, data = null, status = null) {
+    async buscar(token, idConsulta = '', idCliente = '', idDentista = '', data = '', status = '', idServico = "") {
         try {
 
-            const req = await fetch(`${url}/consultas?idConsulta=${idConsulta}&idCliente=${idCliente}&idDentista=${idDentista}&data=${data}&status=${status}`, {
+            const endpoints = `/consultas?idConsulta=${idConsulta}&idCliente=${idCliente}&idDentista=${idDentista}&data=${data}&status=${status}&idServico=${idServico}`
+
+            const req = await fetch(`${url}${endpoints}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
