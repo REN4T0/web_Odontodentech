@@ -100,12 +100,24 @@
 }
 
 .btn-agendar-consulta{
-    background: var(--gradiente1);
-    color: var(--branco);
+
+    font-size: 22px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    background: var(--branco);
+    color: var(--marino);
+    cursor: pointer;
+    border: 5px solid var(--marino);
 }
 
 .btn-agendar-consulta:hover{
-    background-color: var(--marino) !important;
+    background: var(--marino) !important;
+    color: var(--branco) !important;
+}
+
+.btn-agendar-consulta:active{
+    background: var(--verde) !important;
     color: var(--branco) !important;
 }
 

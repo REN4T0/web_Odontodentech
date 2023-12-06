@@ -66,7 +66,7 @@ export default class Consultas {
         }
     };
 
-    async status(token, id, status) {
+    async alterarStatus(token, id, status) {
         try {
 
             const obj = {

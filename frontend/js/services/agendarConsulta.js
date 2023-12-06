@@ -6,14 +6,21 @@ document.addEventListener("click", async evento => {
 
     const elemento = evento.target;
 
-    if (elemento.classList.contains("filter-button")) await buscarConsultas(elemento.value);
+    
+
+    // Buscar e exibir as consultas
+    if (elemento.classList.contains("filter-button")) await buscarConsultas(elemento.value, elemento.textContent);
+
+    // Agendar a consulta
+    if (elemento.classList.contains("btn-agendar-consulta")) await agendarConsulta(elemento.value, elemento.getAttribute('data-idServico'));
 
 
 });
 
-async function buscarConsultas(servico) {
+async function buscarConsultas(servico, nomeServico) {
     
     try {
+
 
         // Seleciona a data para filtrar a pesquisa
         const data = document.querySelector(".barra-pesquisa-data").value;
@@ -34,7 +41,7 @@ async function buscarConsultas(servico) {
         if (resultado.status === 'error') return alert(resultado.msg);
 
         // Gerando os cards
-        gerarCardsConsultas(resultado.dados);
+        gerarCardsConsultas(resultado.dados, nomeServico);
 
         
 
@@ -44,9 +51,20 @@ async function buscarConsultas(servico) {
     }
 }
 
-function gerarCardsConsultas(consultas) {
+function gerarCardsConsultas(consultas, nomeServico) {
 
     const divCards = document.querySelector(".div-cards-consultas");
+
+    divCards.innerHTML = "";
+
+    // Ordenando por data
+    consultas.sort(function(a, b) {
+        // Convertendo as strings de data para objetos Date antes de comparar
+        const dataA = new Date(a.data);
+        const dataB = new Date(b.data);
+        
+        return dataA - dataB;
+    });
 
     for (let consulta of consultas) {
 
@@ -56,17 +74,20 @@ function gerarCardsConsultas(consultas) {
         // Titulo
         const tituloCard = document.createElement("h1");
         tituloCard.classList.add("titulo-card");
-        tituloCard.textContent = `${consulta.idServico}`;
+        tituloCard.textContent = `${nomeServico}`;
         card.appendChild(tituloCard);
+
+        // Modificando a data
+        const [ano, mes, dia] = consulta.data.split('-');
 
         // Data
         const pData = document.createElement("p");
-        pData.textContent = consulta.data;
+        pData.textContent = `Data: ${dia}/${mes}/${ano}`;
         card.appendChild(pData);
 
         // Hora
         const pHorario = document.createElement("p");
-        pHorario.textContent = consulta.horario;
+        pHorario.textContent = `Horário: ${consulta.horario}`;
         card.appendChild(pHorario);
 
         const divBtn = document.createElement("div");
@@ -75,9 +96,9 @@ function gerarCardsConsultas(consultas) {
         // Botão de agendar
         const btnAgendar = document.createElement("button");
         btnAgendar.classList.add("btn-agendar-consulta");
-        btnAgendar.classList.add("button");
         btnAgendar.textContent = "Agendar"
         btnAgendar.value = consulta._id;
+        btnAgendar.setAttribute("data-idServico", consulta.idServico);
         divBtn.appendChild(btnAgendar)
 
         card.appendChild(divBtn)
@@ -87,5 +108,32 @@ function gerarCardsConsultas(consultas) {
 
     // Caso encontre as consultas, realiza uma rolagem de tela até a sessão de cards
     divCards.scrollIntoView({ behavior: "smooth" });
+
+}
+
+async function agendarConsulta(id, idServico) {
+
+    const token = localStorage.getItem("token");
+    const idUsuario = localStorage.getItem("idUsuario");
+
+    const consulta = new Consultas('', '', '', '', idUsuario, idServico);
+
+    try {
+
+        const resultado = await consulta.alterarStatus(token, id, "agendado");
+
+        if (resultado.status === 'success') {
+
+            alert("Agendamento realizado com sucesso.");
+            location.reload();
+
+        } else {
+            alert(resultado.msg);
+        }
+        
+    } catch (error) {
+        console.error(error);
+        return alert("Um erro inesperado ocorreu, tente novamente mais tarde...")
+    }
 
 }
