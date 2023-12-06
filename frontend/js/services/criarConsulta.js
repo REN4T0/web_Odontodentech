@@ -1,12 +1,27 @@
 import Consultas from "../api/Consultas.js";
+import { gerarCardCons } from "../modules/gerarCardCons.js";
 import Funcionarios from "../api/Funcionarios.js";
 import Servicos from "../api/Servicos.js";
 
 /*
     -----------------------------------------------------------------------------------------------------
-                                        PUXANDO SERVIÇOS E DENTISTAS
+                                PUXANDO SERVIÇOS, DENTISTAS E CONSULTAS
     -----------------------------------------------------------------------------------------------------
 */
+
+// Puxando consultas
+async function puxarCons(token){
+    const consulta = new Consultas("", "", "", "", "", "");
+    const resultado = await consulta.buscar(token, "", "", "", "", "", "");
+
+    if(resultado.status == "error") return alert(resultado.msg);
+    
+    const dados = resultado.dados;
+    console.log(dados);
+    return dados;
+}
+
+
 
 // Puxando funcionários
 async function puxarFunc(token){
@@ -24,6 +39,8 @@ async function puxarFunc(token){
     return filtro;
 }
 
+
+
 // Puxando serviços
 async function puxarServ(token){
     const servicos = new Servicos();
@@ -35,16 +52,7 @@ async function puxarServ(token){
     return dados;
 }
 
-// Chamando as funções acima qunado a tela carregar
-window.addEventListener("load", async () => {
-    // Coletando o token de autenticação
-    const autorizacao = localStorage.getItem("token");
 
-    const dentista = await puxarFunc(autorizacao);
-    const servicos = await puxarServ(autorizacao);
-
-    gerarOption(dentista, servicos);
-});
 
 // Função para inserir os options nos select
 function gerarOption(dentistArray, servicosArray){
@@ -64,7 +72,6 @@ function gerarOption(dentistArray, servicosArray){
         selectDentista.appendChild(option);
     }
 
-
     // Looping que vai inserir os options do serviço
     for(let servicos of servicosArray){
         let option = document.createElement("option");
@@ -75,6 +82,23 @@ function gerarOption(dentistArray, servicosArray){
         selectServico.appendChild(option);
     }
 }
+
+
+
+
+
+// Chamando as funções acima quando a tela carregar
+window.addEventListener("load", async () => {
+    // Coletando o token de autenticação
+    const autorizacao = localStorage.getItem("token");
+
+    const consulta = await puxarCons(autorizacao);
+    const dentista = await puxarFunc(autorizacao);
+    const servicos = await puxarServ(autorizacao);
+
+    gerarCardCons(consulta);
+    gerarOption(dentista, servicos);
+});
 
 /*
     -----------------------------------------------------------------------------------------------------
@@ -88,7 +112,7 @@ document.addEventListener("click", async evento => {
     const token = localStorage.getItem("token"); // Coletando o token
     const elemento = evento.target; // Elemento clicado é selecionado
     
-    // Condição para vrificar a classe do elemento clicado
+    // Condição para verificar a classe do elemento clicado
     if(elemento.classList.contains("criar-consulta")){
         const resultado = await criarConsulta(token); //Função caso a classe seja a especificada acima ;)
         console.log(resultado);
@@ -108,10 +132,12 @@ async function criarConsulta(token){
     const data = datahora.substr(0,10);
     const hora = datahora.substr(11)
 
-    // console.log(data, hora);
+    console.log(dentista, servico, data, hora);
 
-    const consulta = new Consultas(data, hora, dentista, servico)
+    console.log
+
+    const consulta = new Consultas(data, hora, dentista, "", "", servico)
     const novaConsulta = await consulta.criar(token);
 
-    return novaConsulta
+    return novaConsulta;
 }
