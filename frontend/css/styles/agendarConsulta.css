@@ -99,6 +99,16 @@
 
 }
 
+.btn-agendar-consulta{
+    background: var(--gradiente1);
+    color: var(--branco);
+}
+
+.btn-agendar-consulta:hover{
+    background-color: var(--marino) !important;
+    color: var(--branco) !important;
+}
+
 
 /* 
     --------------------------------------------------------------------------------------------------
