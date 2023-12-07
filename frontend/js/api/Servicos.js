@@ -5,7 +5,7 @@ const url = "https://dentech-api.vercel.app"
 
 export default class Servicos {
 
-    constructor(nomeServico = null, descricao = null, preco = null) {
+    constructor(nomeServico = '', descricao = '', preco = '') {
         this.nomeServico = nomeServico;
         this.descricao = descricao;
         this.preco = preco;
@@ -39,7 +39,7 @@ export default class Servicos {
         }
     };
 
-    async buscar (id = null, token) {
+    async buscar (id = '', token) {
         try {
 
             const req = await fetch(`${url}/servicos?id=${id}`, {

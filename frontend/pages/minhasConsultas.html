@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas onsultas - Dentech</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+          <img
+            class="logo"
+            src="/frontend/images/img/nav_logo.png"
+            onclick="rotas('home')"
+            alt="logo da dentech"
+          />
+  
+          <ul class="nav-list">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li>
+              <a class="nav-link" onclick="rotas('consultas')">Consultas</a>
+            </li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li>
+              <a class="nav-link link-sair" onclick="rotas('home')">Sair</a>
+            </li>
+          </ul>
+  
+          <button class="hamburguer"></button>
+        </nav>
+    </header>
+
+    <main class="main-minhas-consultas">
+
+        <h1 class="maintitle">Minhas consultas</h1>
+
+        <div class="div-filtros-minhas-consultas">
+
+            <button class="filter-button filtro-agendados">
+                <img class="filter-button-img" src="../images/icons/alarm.svg" alt="Ícone de um relógio">
+                <p class="filter-button-text">Agendados</p>
+            </button>
+
+            <button class="filter-button filtro-realizados">
+                <img class="filter-button-img" src="../images/icons/check_circle.svg" alt="Ícone de um relógio">
+                <p class="filter-button-text">Realizados</p>
+            </button>
+
+            <button class="filter-button filtro-cancelados">
+                <img class="filter-button-img" src="../images/icons/cancel.svg" alt="Ícone de um relógio">
+                <p class="filter-button-text">Cancelados</p>
+            </button>
+
+        </div>
+
+        <div class="div-exibir-minhas-consultas">
+          
+        </div>
+
+    </main>
+
+
+    <script type="module" src="../js/scripts/navbar.js"></script>
+    <script type="module" src="../js/services/MinhasConsultas.js"></script>
+    
+</body>
+</html>
