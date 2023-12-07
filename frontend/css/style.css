@@ -18,6 +18,7 @@
 @import url("/frontend/css/components/modal.css"); /* modal */
 @import url("/frontend/css/components/label.css"); /* label */
 @import url("/frontend/css/components/cards.css"); /* cards */
+@import url("/frontend/css/components/table.css"); /* tabela */
 @import url("/frontend/css/components/header.css"); /* cabeçalhos das telas de funcionário e criar consultas */
 
 
@@ -30,3 +31,4 @@
 @import url("/frontend/css/styles/criarConsulta.css"); /* criar consultas */
 @import url("/frontend/css/styles/agendarConsulta.css"); /* Agendar consulta */
 @import url("/frontend/css/styles/minhasConsultas.css"); /* Minhas Consultas */
+@import url("/frontend/css/styles/relatorio.css"); /* Relatório */

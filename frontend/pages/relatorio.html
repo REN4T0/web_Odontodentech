@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório - Dentech</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+          <img
+            class="logo"
+            src="/frontend/images/img/nav_logo.png"
+            onclick="rotas('home')"
+            alt="logo da dentech"
+          />
+  
+          <ul class="nav-list">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li>
+              <a class="nav-link" onclick="rotas('consultas')">Consultas</a>
+            </li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li>
+              <a class="nav-link link-sair" onclick="rotas('home')">Sair</a>
+            </li>
+          </ul>
+  
+          <button class="hamburguer"></button>
+        </nav>
+      </header>
+
+      <section class="section-relatorio">
+
+        <h1 class="maintitle">Relatório</h1>
+
+        <section class="div-input-pesquisa-btn">
+
+            <label>Selecione o mês e o ano desejado:</label> <br>
+
+            <input
+              type="month"
+              class="barra-pesquisa-data input"
+              placeholder="Pesquise por horários disponíveis..."
+              autofocus
+            />
+
+          </section>
+
+        <!-- Envolver a tabela em uma div para deixá-la responsiva -->
+    <div class="responsiveTable">
+        <table>
+
+            <!-- Descrição da tabela usando <caption></caption> (opicional) -->
+            <caption>Relatório mensal de agendamentos</caption>
+
+            <!-- Cabeçalho da tabela "<thead></thead>" -->
+            <thead>
+                <!-- Para linhas, utilizamos a tag "<tr></tr>" -->
+                <tr>
+                    <!-- Para colunas no "thead" utilizamos "<th></th>" -->
+                    <th>Agendamentos</th>
+
+                    <th>Dentista</th>
+
+                    <th>Serviços</th>
+
+                    <th>Preço</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <!-- Corpo da tabela "<tbody></tbody>" -->
+            <tbody>
+                <!-- Linha -->
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+
+            <!-- Rodapé da tabela "<tfoot></tfoot>" -->
+            <tfoot>
+                <tr>
+                    <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+
+      </section>
+
+
+      <script type="module" src="../js/scripts/navbar.js"></script>
+    
+</body>
+</html>

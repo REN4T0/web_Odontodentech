@@ -1,0 +1,36 @@
+table {
+    width: 95%;
+		/* Juntar as bordas da tabela*/
+    border-collapse: collapse;
+}
+
+table caption {
+    caption-side: top;
+    text-align: left;
+    font-style: italic;
+    font-size: 20px;
+}
+
+table td,
+table th {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
+thead td, thead th{
+    background-color: var(--ciano);
+}
+
+tfoot td, tfoot th{
+    background-color: var(--verdeagua);
+}
+
+/* Deixando a div coma tabela dentro responsiva */
+.responsiveTable{
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
