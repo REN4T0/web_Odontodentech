@@ -101,3 +101,75 @@
 .btn-cancelar-consulta:active{
     width: 35%;
 }
+
+.modal-minhas-consultas{
+    width: 45%;
+    height: auto;
+    background: var(--branco);
+    border-top: 10px solid var(--verde);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.titulo-modal-consulta{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.data-modal-consulta{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.preco-modal-consulta{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.descricao-modal-consulta{
+
+    margin-bottom: 30px;
+    margin-left: 20px;
+
+}
+
+
+@media (max-width: 800px) {
+    .modal-minhas-consultas{
+        width: 75%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .titulo-modal-consulta{
+        font-size: 28px;
+    }
+
+    .data-modal-consulta{
+        font-size: 18px;
+    }
+    
+
+    .preco-modal-consulta{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 200px) {
+
+    .titulo-modal-consulta{
+        font-size: 24px;
+    }
+
+    .data-modal-consulta{
+        font-size: 14px;
+    }
+    
+
+    .preco-modal-consulta{
+        font-size: 14px;
+    }
+
+}

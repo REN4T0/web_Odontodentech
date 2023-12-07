@@ -1,5 +1,5 @@
-import Consultas from '../api/Consultas.js'
-import Servicos from '../api/Servicos.js'
+import Consultas from '../api/Consultas.js';
+import Servicos from '../api/Servicos.js';
 
 document.addEventListener("click", async evento => {
 
@@ -23,6 +23,30 @@ document.addEventListener("click", async evento => {
    
         // Buscando as consultas
         await buscarConsultas(idUsuario, token, status)
+
+    }
+
+    if (elemento.classList.contains("btn-ver-consulta")) {
+
+        await exibirConsultaEspecifica(elemento.value);
+
+    }
+
+    if (elemento.classList.contains("btn-cancelar-consulta")){
+
+        const confirma = confirm("Tem certeza de que deseja cancelar o agendamento?");
+
+        const idServico = elemento.getAttribute("data-idServico");
+
+        if (confirma === true) await cancelarConsulta(elemento.value, idServico);
+
+    }
+
+    if (elemento.classList.contains("btn-voltar")) {
+
+        const modalConsulta = document.querySelector(".fundo-modal");
+        modalConsulta.style.display = 'none'
+        document.body.style.overflow = 'auto';
 
     }
 
@@ -76,6 +100,11 @@ async function gerarCardsConsultas(consultas, token) {
         const card = document.createElement("div");
         card.classList.add("cards");
 
+        if (consulta.status === 'cancelado') {
+            card.classList.remove("cards");
+            card.classList.add("cards-inativo");
+        }
+
         // Titulo
         const tituloCard = document.createElement("h1");
         tituloCard.classList.add("titulo-card");
@@ -125,5 +154,70 @@ async function gerarCardsConsultas(consultas, token) {
 
     // Caso encontre as consultas, realiza uma rolagem de tela até a sessão de cards
     divCards.scrollIntoView({ behavior: "smooth" });
+
+}
+
+async function exibirConsultaEspecifica(idConsulta) {
+
+    try {
+
+        const consultas = new Consultas();
+        const servicos = new Servicos();
+
+        const token = localStorage.getItem("token");
+
+        // Buscando a consulta
+        const resultado = await consultas.buscar(token, idConsulta, '', '', '', '', '');
+
+        if(resultado.status === 'error') return alert(resultado.msg);
+
+        // Buscando o serviço
+        const reqServico = await servicos.buscar(resultado.dados[0].idServico, token);
+
+        if(reqServico.status === 'error') return alert(resultado.msg);
+
+        // Alterando a exibição do modal
+        const modalConsulta = document.querySelector(".fundo-modal");
+        modalConsulta.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+    
+        const [ano, mes, dia] = resultado.dados[0].data.split('-');
+        const horario = resultado.dados[0].horario;
+
+        document.querySelector(".titulo-modal-consulta").textContent = `${reqServico.dados.nomeServico}`;
+        document.querySelector(".data-modal-consulta").textContent = `${dia}/${mes}/${ano}   ${horario}`;
+        document.querySelector(".preco-modal-consulta").textContent = `R$:${reqServico.dados.preco.toFixed(2)}`;
+        document.querySelector(".descricao-modal-consulta").textContent = `${reqServico.dados.descricao}`;
+
+
+        
+    } catch (error) {
+        console.error(error);
+        return alert("Ocorreu um erro inesperado. Por favor, tente novamente mais tarde...");
+    }
+
+}
+
+async function cancelarConsulta(idConsulta, idServico) {
+
+    try {
+
+        const idUsuario = localStorage.getItem("idUsuario");
+
+        const consultas = new Consultas('', '', '', '', idUsuario, idServico);
+
+        const token = localStorage.getItem("token");
+
+        const cancelamento = await consultas.alterarStatus(token, idConsulta, "cancelado");
+
+        alert(cancelamento.msg);
+
+        location.reload();
+
+    } catch (error) {
+        console.error(error);
+        return alert("Algum erro inesperado ocorreu. Tente novamente mais tarde...");
+    }
 
 }
