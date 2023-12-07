@@ -77,6 +77,8 @@ form.addEventListener('submit', async evento => {
 
         alert(resultado.msg);
 
+        localStorage.clear();
+
         localStorage.setItem('nome', resultado.dados.nome);
         localStorage.setItem('sobrenome', resultado.dados.sobrenome);
         localStorage.setItem('email', resultado.dados.email);
