@@ -1,12 +1,14 @@
-table {
-    width: 95%;
+.tabela-relatorio {
+    width: 90%;
 		/* Juntar as bordas da tabela*/
     border-collapse: collapse;
+    display: none;
+    margin-bottom: 50px;
 }
 
 table caption {
     caption-side: top;
-    text-align: left;
+    text-align: center;
     font-style: italic;
     font-size: 20px;
 }
@@ -15,15 +17,18 @@ table td,
 table th {
     border: 1px solid black;
     padding: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 thead td, thead th{
-    background-color: var(--ciano);
+    background-color: var(--marino);
+    color: var(--branco);
 }
 
 tfoot td, tfoot th{
-    background-color: var(--verdeagua);
+    background: var(--ciano);
+    color: var(--branco);
+    text-align: start;
 }
 
 /* Deixando a div coma tabela dentro responsiva */
@@ -34,3 +39,12 @@ tfoot td, tfoot th{
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 545px) {
+    
+    .responsiveTable{
+        justify-content: flex-start;
+    }
+
+}
+ 

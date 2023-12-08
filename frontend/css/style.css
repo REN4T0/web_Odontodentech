@@ -19,6 +19,7 @@
 @import url("/frontend/css/components/label.css"); /* label */
 @import url("/frontend/css/components/cards.css"); /* cards */
 @import url("/frontend/css/components/table.css"); /* tabela */
+@import url("/frontend/css/components/loader.css"); /* loader */
 @import url("/frontend/css/components/header.css"); /* cabeçalhos das telas de funcionário e criar consultas */
 
 

@@ -53,7 +53,10 @@
 
         <!-- Envolver a tabela em uma div para deixá-la responsiva -->
     <div class="responsiveTable">
-        <table>
+
+      <div class="loader"></div>
+
+        <table class="tabela-relatorio">
 
             <!-- Descrição da tabela usando <caption></caption> (opicional) -->
             <caption>Relatório mensal de agendamentos</caption>
@@ -88,12 +91,10 @@
             <tfoot>
                 <tr>
                     <!-- Colunas no "tbody" é usando com a tag "<td></td>" -->
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
+                    <td colspan="5" class="rodape-tabela">
+                      
+                    </td>
+                    
                 </tr>
             </tfoot>
 
