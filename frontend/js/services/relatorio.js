@@ -2,6 +2,19 @@ import Consultas from "../api/Consultas.js"
 import Funcionarios from "../api/Funcionarios.js"
 import Servicos from "../api/Servicos.js"
 
+// Verificação de perimissão da página
+window.addEventListener("load", () => {
+
+    const token = localStorage.getItem("token");
+    const cargo = localStorage.getItem("cargo");
+    const idUsuario = localStorage.getItem("idUsuario");
+
+    if (token === undefined || token === '' || token === null) location.href = "../pages/erro.html";
+    if (idUsuario === undefined || idUsuario === '' || idUsuario === null) location.href = "../pages/erro.html";
+    if (cargo !== 'adm') location.href = "../pages/erro.html";
+
+});
+
 // Botão para gerar o relatório
 const btnGerarRelatorio = document.querySelector(".btn-buscar-relatorio");
 btnGerarRelatorio.addEventListener('click', async () => {

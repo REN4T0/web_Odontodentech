@@ -28,6 +28,14 @@
     list-style: none;
 }
 
+.nav-func{
+    display: none;
+}
+
+.nav-adm{
+    display: none;
+}
+
 .nav-link{
     text-decoration: none;
     font-size: 20px; 

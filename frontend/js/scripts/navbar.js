@@ -11,12 +11,8 @@ hamburguer.addEventListener("click", () => {
 window.addEventListener("load", () => {
 
     const token = localStorage.getItem("token");
-    const idUsuario = localStorage.getItem("idUsuario");
 
-    if (token && idUsuario) {
-
-        const botoes = document.querySelector("#nav-button");
-        botoes.style.display = "none";
+    if (token) {
 
         const navList = document.querySelector(".nav-list");
 
@@ -31,6 +27,10 @@ window.addEventListener("load", () => {
         list.appendChild(link);
 
         navList.appendChild(list);
+
+        // Desaparecer os botões de login e cadastro
+        const botoes = document.querySelector("#nav-button");
+        botoes.style.display = "none";
 
     } else {
         const botoes = document.querySelector("#nav-button");
