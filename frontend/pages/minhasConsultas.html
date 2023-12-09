@@ -8,26 +8,47 @@
 </head>
 <body>
 
-    <header class="header">
-        <nav class="nav">
-          <img
-            class="logo"
-            src="/frontend/images/img/nav_logo.png"
-            onclick="rotas('home')"
-            alt="logo da dentech"
-          />
-  
-          <ul class="nav-list">
+  <header class="header">
+    <nav class="nav">
+        <img class="logo" src="/frontend/images/img/nav_logo.png" onclick="rotas('home')" alt="logo da dentech">
+
+        <ul class="nav-list nav-padrao">
             <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
-            <li>
-              <a class="nav-link" onclick="rotas('consultas')">Consultas</a>
-            </li>
             <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
-          </ul>
-  
-          <button class="hamburguer"></button>
-        </nav>
-    </header>
+            <div id="nav-button">
+                <button id="cad-button" class="button" onclick="rotas('cadastro')">Cadastre-se</button>
+                <button id="log-button" class="button" onclick="rotas('login')">Login</button>
+            </div>
+        </ul>
+
+        <ul class="nav-list nav-func">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li><a class="nav-link" onclick="rotas('criar consulta')">Consulta</a></li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li><a class="nav-link link-sair">Sair</a></li>
+        </ul>
+
+        <ul class="nav-list nav-adm">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li><a class="nav-link" onclick="rotas('listar funcionarios')">Funcionários</a></li>
+            <li><a class="nav-link" onclick="rotas('criar consulta')">Consulta</a></li>
+            <li><a class="nav-link" onclick="rotas('relatorio')">Relatório</a></li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li><a class="nav-link link-sair">Sair</a></li>
+        </ul>
+
+        <ul class="nav-list nav-cliente">
+            <li><a class="nav-link" onclick="rotas('home')">Início</a></li>
+            <li><a class="nav-link" onclick="rotas('minhas consultas')">Consultas</a></li>
+            <li><a class="nav-link" onclick="rotas('agendar consultas')">Agendamento</a></li>
+            <li><a class="nav-link" onclick="rotas('sobre')">Sobre</a></li>
+            <li><a class="nav-link link-sair">Sair</a></li>
+        </ul>
+
+
+        <button class="hamburguer"></button>
+    </nav>
+</header>
 
     <main class="main-minhas-consultas">
 

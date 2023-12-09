@@ -12,7 +12,43 @@ window.addEventListener("load", () => {
 
     const token = localStorage.getItem("token");
 
-    if (token) {
+    // Verifição de login
+    if (token !== null && token !== "" && token !== undefined) {
+
+        console.log("Teste")
+
+        // Verificação de cargo para saber qual navbar será exibida
+        const cargo = localStorage.getItem("cargo");
+        console.log(cargo);
+
+        if (cargo === "adm") {
+
+            const navbars = document.querySelector(".nav-padrao");
+
+            navbars.style.display = "none"
+
+            const navAdm = document.querySelector(".nav-adm");
+            navAdm.style.display = "flex";
+
+        } else if (cargo === "dentista" || "assistente") {
+
+            const navbars = document.querySelector(".nav-padrao");
+
+            navbars.style.display = "none"
+
+            const navFunc = document.querySelector(".nav-func");
+            navFunc.style.display = "flex";
+
+        } else {
+
+            const navbars = document.querySelector(".nav-padrao");
+
+            navbars.style.display = "none"
+
+            const navFunc = document.querySelector(".nav-cliente");
+            navFunc.style.display = "flex";
+            
+        }
 
         const navList = document.querySelector(".nav-list");
 
@@ -32,10 +68,21 @@ window.addEventListener("load", () => {
         const botoes = document.querySelector("#nav-button");
         botoes.style.display = "none";
 
+
     } else {
-        const botoes = document.querySelector("#nav-button");
-        botoes.style.display = "flex";
+
+        const navbars = document.querySelectorAll(".nav-list");
+
+        for (let i = 0; i < navbars.length; i++) {
+            navbars[i].style.display = "none";
+        }
+
+        const navPadrao = document.querySelector(".nav-padrao");
+        navPadrao.style.display = "flex";
+
     }
+
+    
 
 });
 

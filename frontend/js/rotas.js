@@ -19,7 +19,25 @@ function rotas(navegar){
         case "login":
             window.location.href = `${pagesFolderRoute}login.html`;
             break;
+        case "minhas consultas":
+            window.location.href = `${pagesFolderRoute}minhasConsultas.html`;
+            break;
+        case "agendar consultas":
+            window.location.href = `${pagesFolderRoute}agendarConsulta.html`;
+            break;
+        case "criar consulta":
+            window.location.href = `${pagesFolderRoute}criarConsulta.html`;
+            break;
+        case "erro":
+            window.location.href = `${pagesFolderRoute}erro.html`;
+            break;
+        case "listar funcionarios":
+            window.location.href = `${pagesFolderRoute}listarFuncionarios.html`;
+            break;
+        case "relatorio":
+            window.location.href = `${pagesFolderRoute}relatorio.html`;
+            break;
         default:
-            alert("ERRO - O redirecionamento não encontrou a página que você quer acessar. Desculpe o transtorno.")
+            window.location.href = `${pagesFolderRoute}erro.html`;
     }
 }
