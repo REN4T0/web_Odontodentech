@@ -8,7 +8,7 @@ function rotas(navegar){
             window.location.href = "/index.html";
             break;
         case "consultas":
-            window.location.href = `${pagesFolderRoute}consultas.html`;
+            window.location.href = `${pagesFolderRoute}consulta.html`;
             break;
         case "sobre":
             window.location.href = `${pagesFolderRoute}sobre.html`;

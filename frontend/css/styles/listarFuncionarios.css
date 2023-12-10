@@ -199,7 +199,7 @@
     border-radius: 30px;
     background-color: transparent;
     color: var(--marino);
-    border: 5px solid var(--marino);
+    border: 3px solid var(--marino);
     font-size: 22px;
     cursor: pointer;
 }
@@ -230,7 +230,7 @@
 }
 
 .btn-modal-editar-func:active{
-    width: 35%;
+    opacity: 0.6;
 }
 
 .btn-demitir-func:active{
