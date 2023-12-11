@@ -37,6 +37,12 @@ function rotas(navegar){
         case "relatorio":
             window.location.href = `${pagesFolderRoute}relatorio.html`;
             break;
+        case "esqueci senha":
+            window.location.href = `${pagesFolderRoute}esqueciSenha.html`;
+            break;
+        case "perfil":
+            window.location.href = `${pagesFolderRoute}perfil.html`;
+            break;
         default:
             window.location.href = `${pagesFolderRoute}erro.html`;
     }

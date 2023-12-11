@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
             const navAdm = document.querySelector(".nav-adm");
             navAdm.style.display = "flex";
 
-        } else if (cargo === "dentista" || "assistente") {
+        } else if (cargo == "dentista" || "assistente") {
 
             const navbars = document.querySelector(".nav-padrao");
 
@@ -45,8 +45,8 @@ window.addEventListener("load", () => {
 
             navbars.style.display = "none"
 
-            const navFunc = document.querySelector(".nav-cliente");
-            navFunc.style.display = "flex";
+            const navCli = document.querySelector(".nav-cliente");
+            navCli.style.display = "flex";
             
         }
 

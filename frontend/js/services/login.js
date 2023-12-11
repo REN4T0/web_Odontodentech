@@ -87,6 +87,8 @@ form.addEventListener('submit', async evento => {
         localStorage.setItem('token', resultado.token);
         
         // Falta redirecionar para alguma página que ainda não foi feita
+
+        window.location.href = "/index.html"
     }
 
 });

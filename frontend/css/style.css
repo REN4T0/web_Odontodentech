@@ -34,3 +34,5 @@
 @import url("/frontend/css/styles/minhasConsultas.css"); /* Minhas Consultas */
 @import url("/frontend/css/styles/relatorio.css"); /* Relatório */
 @import url("/frontend/css/styles/error.css"); /* Erro */
+@import url("/frontend/css/styles/esqueciSenha.css"); /* esqueci senha */
+@import url("/frontend/css/styles/perfil.css");
